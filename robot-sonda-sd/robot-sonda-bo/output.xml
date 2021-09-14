@@ -1,77 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.2 on win32)" generated="20210913 09:10:53.475" rpa="false" schemaversion="2">
-<suite id="s1" name="Robot-Sonda-Sd" source="D:\Repos\ProcesosRepo\robot-sonda-sd\robot-sonda-sd">
-<suite id="s1-s1" name="TC002" source="D:\Repos\ProcesosRepo\robot-sonda-sd\robot-sonda-sd\TC002.robot">
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210914 14:19:57.596" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot-Sonda-Bo" source="C:\robot_Sonda\robot-sonda-sd\robot-sonda-sd\robot-sonda-bo">
+<suite id="s1-s1" name="TC002" source="C:\robot_Sonda\robot-sonda-sd\robot-sonda-sd\robot-sonda-bo\TC002.robot">
 <test id="s1-s1-t1" name="Loggin">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://190.149.249.218:8088</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210913 09:10:53.774" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
-<status status="PASS" starttime="20210913 09:10:53.773" endtime="20210913 09:11:03.441"/>
+<msg timestamp="20210914 14:19:57.979" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
+<status status="PASS" starttime="20210914 14:19:57.978" endtime="20210914 14:20:09.441"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtUsuario</arg>
 <arg>gerente@diprocom</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210913 09:11:03.449" level="INFO">Typing text 'gerente@diprocom' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
-<status status="PASS" starttime="20210913 09:11:03.449" endtime="20210913 09:11:03.571"/>
+<msg timestamp="20210914 14:20:09.444" level="INFO">Typing text 'gerente@diprocom' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
+<status status="PASS" starttime="20210914 14:20:09.442" endtime="20210914 14:20:09.578"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>1237710</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210913 09:11:03.571" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
-<status status="PASS" starttime="20210913 09:11:03.571" endtime="20210913 09:11:03.664"/>
+<msg timestamp="20210914 14:20:09.579" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
+<status status="PASS" starttime="20210914 14:20:09.579" endtime="20210914 14:20:09.691"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20210913 09:11:03.665" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
-<msg timestamp="20210913 09:11:03.972" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20210913 09:11:03.973" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20210913 09:11:03.664" endtime="20210913 09:11:03.984"/>
+<msg timestamp="20210914 14:20:09.694" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
+<msg timestamp="20210914 14:20:10.039" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210914 14:20:10.039" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210914 14:20:09.692" endtime="20210914 14:20:10.054"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210913 09:11:05.990" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210913 09:11:03.984" endtime="20210913 09:11:05.990"/>
+<msg timestamp="20210914 14:20:12.069" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210914 14:20:10.055" endtime="20210914 14:20:12.069"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210913 09:11:05.991" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
-<status status="PASS" starttime="20210913 09:11:05.990" endtime="20210913 09:11:06.046"/>
+<msg timestamp="20210914 14:20:12.070" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
+<status status="PASS" starttime="20210914 14:20:12.069" endtime="20210914 14:20:12.124"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210913 09:11:11.050" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210913 09:11:06.047" endtime="20210913 09:11:11.050"/>
+<msg timestamp="20210914 14:20:17.131" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210914 14:20:12.125" endtime="20210914 14:20:17.131"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210913 09:11:11.051" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
-<status status="PASS" starttime="20210913 09:11:11.050" endtime="20210913 09:11:11.137"/>
+<msg timestamp="20210914 14:20:17.132" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
+<status status="PASS" starttime="20210914 14:20:17.131" endtime="20210914 14:20:26.551"/>
 </kw>
-<status status="PASS" starttime="20210913 09:10:53.772" endtime="20210913 09:11:11.138"/>
+<tag>LoginSondaBO</tag>
+<status status="PASS" starttime="20210914 14:19:57.977" endtime="20210914 14:20:26.551"/>
 </test>
-<status status="PASS" starttime="20210913 09:10:53.537" endtime="20210913 09:11:11.139"/>
+<test id="s1-s1-t2" name="Catalogos-Clientes">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/ul/li[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 14:20:26.555" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/ul/li[1]/span'.</msg>
+<status status="PASS" starttime="20210914 14:20:26.554" endtime="20210914 14:20:26.679"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/ul/li[1]/ul/li[3]/div/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 14:20:26.680" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/ul/li[1]/ul/li[3]/div/span'.</msg>
+<status status="PASS" starttime="20210914 14:20:26.679" endtime="20210914 14:20:26.739"/>
+</kw>
+<tag>Clientes</tag>
+<status status="PASS" starttime="20210914 14:20:26.552" endtime="20210914 14:20:26.739"/>
+</test>
+<status status="PASS" starttime="20210914 14:19:57.704" endtime="20210914 14:20:26.740"/>
 </suite>
-<status status="PASS" starttime="20210913 09:10:53.514" endtime="20210913 09:11:11.142"/>
+<status status="PASS" starttime="20210914 14:19:57.657" endtime="20210914 14:20:26.743"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Clientes</stat>
+<stat pass="1" fail="0" skip="0">LoginSondaBO</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robot-Sonda-Sd">Robot-Sonda-Sd</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC002">Robot-Sonda-Sd.TC002</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Robot-Sonda-Bo">Robot-Sonda-Bo</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="TC002">Robot-Sonda-Bo.TC002</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="BuiltIn" type="LIBRARY" format="ROBOT" scope="GLOBAL" generated="2021-08-31T05:26:42Z" specversion="3" source="D:\Users\9uS\AppData\Local\Programs\Python\Python39\lib\site-packages\robot\libraries\BuiltIn.py" lineno="3560">
-<version>4.1</version>
+<keywordspec name="BuiltIn" type="LIBRARY" format="ROBOT" scope="GLOBAL" generated="2021-09-13T16:58:09Z" specversion="3" source="C:\Users\Eira Delcompare\AppData\Local\Programs\Python\Python39\lib\site-packages\robot\libraries\BuiltIn.py" lineno="3562">
+<version>4.1.1</version>
 <doc>An always available standard library with often needed keywords.
 
 ``BuiltIn`` is Robot Framework's standard library that provides a set
@@ -264,7 +264,7 @@ but with the following differences:
 <inits>
 </inits>
 <keywords>
-<kw name="Call Method" lineno="3308">
+<kw name="Call Method" lineno="3310">
 <arguments repr="object, method_name, *args, **kwargs">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="object">
 <name>object</name>
@@ -299,7 +299,7 @@ Examples:
 | Call Method      | ${object}    | positional   | escaped\=equals  |</doc>
 <shortdoc>Calls the named method of the given object with the provided arguments.</shortdoc>
 </kw>
-<kw name="Catenate" lineno="2833">
+<kw name="Catenate" lineno="2835">
 <arguments repr="*items">
 <arg kind="VAR_POSITIONAL" required="false" repr="*items">
 <name>items</name>
@@ -321,7 +321,7 @@ Examples:
 | ${str3} = 'Helloworld'</doc>
 <shortdoc>Catenates the given items together and returns the resulted string.</shortdoc>
 </kw>
-<kw name="Comment" lineno="2982">
+<kw name="Comment" lineno="2984">
 <arguments repr="*messages">
 <arg kind="VAR_POSITIONAL" required="false" repr="*messages">
 <name>messages</name>
@@ -336,7 +336,7 @@ contain non-existing variables. If you are interested about variable
 values, you can use the `Log` or `Log Many` keywords.</doc>
 <shortdoc>Displays the given messages in the log file as keyword arguments.</shortdoc>
 </kw>
-<kw name="Continue For Loop" lineno="2529">
+<kw name="Continue For Loop" lineno="2531">
 <arguments repr="">
 </arguments>
 <doc>Skips the current for loop iteration and continues from the next.
@@ -355,7 +355,7 @@ See `Continue For Loop If` to conditionally continue a for loop without
 using `Run Keyword If` or other wrapper keywords.</doc>
 <shortdoc>Skips the current for loop iteration and continues from the next.</shortdoc>
 </kw>
-<kw name="Continue For Loop If" lineno="2548">
+<kw name="Continue For Loop If" lineno="2550">
 <arguments repr="condition">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -711,7 +711,7 @@ Examples:
 | ${ints} =   | Create List | ${1} | ${2} | ${3} |</doc>
 <shortdoc>Returns a list containing given items.</shortdoc>
 </kw>
-<kw name="Evaluate" lineno="3252">
+<kw name="Evaluate" lineno="3254">
 <arguments repr="expression, modules=None, namespace=None">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="expression">
 <name>expression</name>
@@ -775,7 +775,7 @@ evaluation namespace. It needed to be taken into use explicitly like
 ``modules=rootmod, rootmod.submod``.</doc>
 <shortdoc>Evaluates the given expression in Python and returns the result.</shortdoc>
 </kw>
-<kw name="Exit For Loop" lineno="2564">
+<kw name="Exit For Loop" lineno="2566">
 <arguments repr="">
 </arguments>
 <doc>Stops executing the enclosing for loop.
@@ -793,7 +793,7 @@ See `Exit For Loop If` to conditionally exit a for loop without
 using `Run Keyword If` or other wrapper keywords.</doc>
 <shortdoc>Stops executing the enclosing for loop.</shortdoc>
 </kw>
-<kw name="Exit For Loop If" lineno="2582">
+<kw name="Exit For Loop If" lineno="2584">
 <arguments repr="condition">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -907,7 +907,7 @@ See also `Length Should Be`, `Should Be Empty` and `Should Not Be
 Empty`.</doc>
 <shortdoc>Returns and logs the length of the given item as an integer.</shortdoc>
 </kw>
-<kw name="Get Library Instance" lineno="3525">
+<kw name="Get Library Instance" lineno="3527">
 <arguments repr="name=None, all=False">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="name=None">
 <name>name</name>
@@ -945,7 +945,7 @@ Example:
 | &amp;{all libs} = | Get library instance | all=True |</doc>
 <shortdoc>Returns the currently active instance of the specified test library.</shortdoc>
 </kw>
-<kw name="Get Time" lineno="3169">
+<kw name="Get Time" lineno="3171">
 <arguments repr="format=timestamp, time_=NOW">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="format=timestamp">
 <name>format</name>
@@ -1098,7 +1098,7 @@ Example:
 | Dictionary Should Contain Key | ${no decoration} | example_variable |</doc>
 <shortdoc>Returns a dictionary containing all variables in the current scope.</shortdoc>
 </kw>
-<kw name="Import Library" lineno="3026">
+<kw name="Import Library" lineno="3028">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1113,12 +1113,12 @@ This functionality allows dynamic importing of libraries while tests
 are running. That may be necessary, if the library itself is dynamic
 and not yet available when test data is processed. In a normal case,
 libraries should be imported using the Library setting in the Setting
-table.
+section.
 
 This keyword supports importing libraries both using library
 names and physical paths. When paths are used, they must be
 given in absolute format or found from
-[http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#pythonpath-jythonpath-and-ironpythonpath|
+[http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#module-search-path|
 search path]. Forward slashes can be used as path separators in all
 operating systems.
 
@@ -1132,7 +1132,7 @@ Examples:
 | Import Library | ${LIBRARIES}/Lib.java | arg | WITH NAME | JavaLib |</doc>
 <shortdoc>Imports a library with the given name and optional arguments.</shortdoc>
 </kw>
-<kw name="Import Resource" lineno="3088">
+<kw name="Import Resource" lineno="3090">
 <arguments repr="path">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
 <name>path</name>
@@ -1155,7 +1155,7 @@ Examples:
 | Import Resource | found_from_pythonpath.robot |</doc>
 <shortdoc>Imports a resource file with the given path.</shortdoc>
 </kw>
-<kw name="Import Variables" lineno="3063">
+<kw name="Import Variables" lineno="3065">
 <arguments repr="path, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
 <name>path</name>
@@ -1183,7 +1183,7 @@ Examples:
 | Import Variables | file_from_pythonpath.py  |      |      |</doc>
 <shortdoc>Imports a variable file with the given path and optional arguments.</shortdoc>
 </kw>
-<kw name="Keyword Should Exist" lineno="3151">
+<kw name="Keyword Should Exist" lineno="3153">
 <arguments repr="name, msg=None">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1223,7 +1223,7 @@ The length of the item is got using the `Get Length` keyword. The
 default error message can be overridden with the ``msg`` argument.</doc>
 <shortdoc>Verifies that the length of the given item is correct.</shortdoc>
 </kw>
-<kw name="Log" lineno="2859">
+<kw name="Log" lineno="2861">
 <arguments repr="message, level=INFO, html=False, console=False, repr=False, formatter=str">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="message">
 <name>message</name>
@@ -1300,7 +1300,7 @@ See `Log Many` if you want to log multiple messages in one go, and
 `Log To Console` if you only want to write to the console.</doc>
 <shortdoc>Logs the given message with the given level.</shortdoc>
 </kw>
-<kw name="Log Many" lineno="2931">
+<kw name="Log Many" lineno="2933">
 <arguments repr="*messages">
 <arg kind="VAR_POSITIONAL" required="false" repr="*messages">
 <name>messages</name>
@@ -1318,7 +1318,7 @@ See `Log` and `Log To Console` keywords if you want to use alternative
 log levels, use HTML, or log to the console.</doc>
 <shortdoc>Logs the given messages as separate entries using the INFO level.</shortdoc>
 </kw>
-<kw name="Log To Console" lineno="2959">
+<kw name="Log To Console" lineno="2961">
 <arguments repr="message, stream=STDOUT, no_newline=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="message">
 <name>message</name>
@@ -1362,13 +1362,13 @@ This keyword does not log the message to the normal log file. Use
 <doc>Logs all variables in the current scope with given log level.</doc>
 <shortdoc>Logs all variables in the current scope with given log level.</shortdoc>
 </kw>
-<kw name="No Operation" lineno="2795">
+<kw name="No Operation" lineno="2797">
 <arguments repr="">
 </arguments>
 <doc>Does absolutely nothing.</doc>
 <shortdoc>Does absolutely nothing.</shortdoc>
 </kw>
-<kw name="Pass Execution" lineno="2721">
+<kw name="Pass Execution" lineno="2723">
 <arguments repr="message, *tags">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="message">
 <name>message</name>
@@ -1420,7 +1420,7 @@ In cases where execution cannot continue do to external factors,
 it is often safer to fail the test case and make it non-critical.</doc>
 <shortdoc>Skips rest of the current test, setup, or teardown with PASS status.</shortdoc>
 </kw>
-<kw name="Pass Execution If" lineno="2773">
+<kw name="Pass Execution If" lineno="2775">
 <arguments repr="condition, message, *tags">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -1446,7 +1446,7 @@ Example:
 | END |</doc>
 <shortdoc>Conditionally skips rest of the current test, setup, or teardown with PASS status.</shortdoc>
 </kw>
-<kw name="Regexp Escape" lineno="3339">
+<kw name="Regexp Escape" lineno="3341">
 <arguments repr="*patterns">
 <arg kind="VAR_POSITIONAL" required="false" repr="*patterns">
 <name>patterns</name>
@@ -1464,7 +1464,7 @@ Examples:
 | @{strings} = | Regexp Escape | @{strings}  |</doc>
 <shortdoc>Returns each argument string escaped for use as a regular expression.</shortdoc>
 </kw>
-<kw name="Reload Library" lineno="3011">
+<kw name="Reload Library" lineno="3013">
 <arguments repr="name_or_instance">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name_or_instance">
 <name>name_or_instance</name>
@@ -1480,7 +1480,7 @@ the library. The latter is especially useful if the library itself
 calls this keyword as a method.</doc>
 <shortdoc>Rechecks what keywords the specified library provides.</shortdoc>
 </kw>
-<kw name="Remove Tags" lineno="3497">
+<kw name="Remove Tags" lineno="3499">
 <arguments repr="*tags">
 <arg kind="VAR_POSITIONAL" required="false" repr="*tags">
 <name>tags</name>
@@ -1504,7 +1504,7 @@ See `Set Tags` if you want to add certain tags and `Fail` if you want
 to fail the test case after setting and/or removing tags.</doc>
 <shortdoc>Removes given ``tags`` from the current test or all tests in a suite.</shortdoc>
 </kw>
-<kw name="Repeat Keyword" lineno="2195">
+<kw name="Repeat Keyword" lineno="2197">
 <arguments repr="repeat, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="repeat">
 <name>repeat</name>
@@ -1565,7 +1565,7 @@ The file ``template.txt`` contains ``Hello ${NAME}!`` and variable
 | Should Be Equal | ${message}        | Hello Robot!           |</doc>
 <shortdoc>Replaces variables in the given text with their current values.</shortdoc>
 </kw>
-<kw name="Return From Keyword" lineno="2599">
+<kw name="Return From Keyword" lineno="2601">
 <arguments repr="*return_values">
 <arg kind="VAR_POSITIONAL" required="false" repr="*return_values">
 <name>return_values</name>
@@ -1616,7 +1616,7 @@ accomplished directly with `Return From Keyword If`. See also
 `Run Keyword And Return` and `Run Keyword And Return If`.</doc>
 <shortdoc>Returns from the enclosing user keyword.</shortdoc>
 </kw>
-<kw name="Return From Keyword If" lineno="2651">
+<kw name="Return From Keyword If" lineno="2653">
 <arguments repr="condition, *return_values">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -1647,7 +1647,7 @@ Given the same example as in `Return From Keyword`, we can rewrite the
 See also `Run Keyword And Return` and `Run Keyword And Return If`.</doc>
 <shortdoc>Returns from the enclosing user keyword if ``condition`` is true.</shortdoc>
 </kw>
-<kw name="Run Keyword" lineno="1857">
+<kw name="Run Keyword" lineno="1859">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1663,7 +1663,7 @@ can be a variable and thus set dynamically, e.g. from a return value of
 another keyword or from the command line.</doc>
 <shortdoc>Executes the given keyword with the given arguments.</shortdoc>
 </kw>
-<kw name="Run Keyword And Continue On Failure" lineno="2109">
+<kw name="Run Keyword And Continue On Failure" lineno="2111">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1684,7 +1684,7 @@ The execution is not continued if the failure is caused by invalid syntax,
 timeout, or fatal exception.</doc>
 <shortdoc>Runs the keyword and continues execution even if a failure occurs.</shortdoc>
 </kw>
-<kw name="Run Keyword And Expect Error" lineno="2129">
+<kw name="Run Keyword And Expect Error" lineno="2131">
 <arguments repr="expected_error, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="expected_error">
 <name>expected_error</name>
@@ -1735,7 +1735,7 @@ Errors caused by invalid syntax, timeouts, or fatal exceptions are not
 caught by this keyword.</doc>
 <shortdoc>Runs the keyword and checks that the expected error occurred.</shortdoc>
 </kw>
-<kw name="Run Keyword And Ignore Error" lineno="2046">
+<kw name="Run Keyword And Ignore Error" lineno="2048">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1759,7 +1759,7 @@ Errors caused by invalid syntax, timeouts, or fatal exceptions are not
 caught by this keyword. Otherwise this keyword itself never fails.</doc>
 <shortdoc>Runs the given keyword with the given arguments and ignores possible error.</shortdoc>
 </kw>
-<kw name="Run Keyword And Return" lineno="2677">
+<kw name="Run Keyword And Return" lineno="2679">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1786,7 +1786,7 @@ Use `Run Keyword And Return If` if you want to run keyword and return
 based on a condition.</doc>
 <shortdoc>Runs the specified keyword and returns from the enclosing user keyword.</shortdoc>
 </kw>
-<kw name="Run Keyword And Return If" lineno="2703">
+<kw name="Run Keyword And Return If" lineno="2705">
 <arguments repr="condition, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -1813,7 +1813,7 @@ Use `Return From Keyword If` if you want to return a certain value
 based on a condition.</doc>
 <shortdoc>Runs the specified keyword and returns from the enclosing user keyword.</shortdoc>
 </kw>
-<kw name="Run Keyword And Return Status" lineno="2088">
+<kw name="Run Keyword And Return Status" lineno="2090">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1839,7 +1839,7 @@ Errors caused by invalid syntax, timeouts, or fatal exceptions are not
 caught by this keyword. Otherwise this keyword itself never fails.</doc>
 <shortdoc>Runs the given keyword with given arguments and returns the status as a Boolean value.</shortdoc>
 </kw>
-<kw name="Run Keyword And Warn On Failure" lineno="2069">
+<kw name="Run Keyword And Warn On Failure" lineno="2071">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1861,7 +1861,7 @@ caught by this keyword. Otherwise this keyword itself never fails.
 New in Robot Framework 4.0.</doc>
 <shortdoc>Runs the specified keyword logs a warning if the keyword fails.</shortdoc>
 </kw>
-<kw name="Run Keyword If" lineno="1940">
+<kw name="Run Keyword If" lineno="1942">
 <arguments repr="condition, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -1945,7 +1945,7 @@ Attributes they contain can thus be used in the condition:
 | ...              | ELSE          | `Windows Keyword`     |</doc>
 <shortdoc>Runs the given keyword with the given arguments, if ``condition`` is true.</shortdoc>
 </kw>
-<kw name="Run Keyword If All Critical Tests Passed" deprecated="true" lineno="2463">
+<kw name="Run Keyword If All Critical Tests Passed" deprecated="true" lineno="2465">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1957,7 +1957,7 @@ Attributes they contain can thus be used in the condition:
 <doc>*DEPRECATED.* Use `BuiltIn.Run Keyword If All Tests Passed` instead.</doc>
 <shortdoc>*DEPRECATED.* Use `BuiltIn.Run Keyword If All Tests Passed` instead.</shortdoc>
 </kw>
-<kw name="Run Keyword If All Tests Passed" lineno="2473">
+<kw name="Run Keyword If All Tests Passed" lineno="2475">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1975,7 +1975,7 @@ Otherwise, this keyword works exactly like `Run Keyword`, see its
 documentation for more details.</doc>
 <shortdoc>Runs the given keyword with the given arguments, if all tests passed.</shortdoc>
 </kw>
-<kw name="Run Keyword If Any Critical Tests Failed" deprecated="true" lineno="2468">
+<kw name="Run Keyword If Any Critical Tests Failed" deprecated="true" lineno="2470">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -1987,7 +1987,7 @@ documentation for more details.</doc>
 <doc>*DEPRECATED.* Use `BuiltIn.Run Keyword If Any Tests Failed` instead.</doc>
 <shortdoc>*DEPRECATED.* Use `BuiltIn.Run Keyword If Any Tests Failed` instead.</shortdoc>
 </kw>
-<kw name="Run Keyword If Any Tests Failed" lineno="2487">
+<kw name="Run Keyword If Any Tests Failed" lineno="2489">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2005,7 +2005,7 @@ Otherwise, this keyword works exactly like `Run Keyword`, see its
 documentation for more details.</doc>
 <shortdoc>Runs the given keyword with the given arguments, if one or more tests failed.</shortdoc>
 </kw>
-<kw name="Run Keyword If Test Failed" lineno="2414">
+<kw name="Run Keyword If Test Failed" lineno="2416">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2023,7 +2023,7 @@ Otherwise, this keyword works exactly like `Run Keyword`, see its
 documentation for more details.</doc>
 <shortdoc>Runs the given keyword with the given arguments, if the test failed.</shortdoc>
 </kw>
-<kw name="Run Keyword If Test Passed" lineno="2428">
+<kw name="Run Keyword If Test Passed" lineno="2430">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2041,7 +2041,7 @@ Otherwise, this keyword works exactly like `Run Keyword`, see its
 documentation for more details.</doc>
 <shortdoc>Runs the given keyword with the given arguments, if the test passed.</shortdoc>
 </kw>
-<kw name="Run Keyword If Timeout Occurred" lineno="2442">
+<kw name="Run Keyword If Timeout Occurred" lineno="2444">
 <arguments repr="name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2059,7 +2059,7 @@ Otherwise, this keyword works exactly like `Run Keyword`, see its
 documentation for more details.</doc>
 <shortdoc>Runs the given keyword if either a test or a keyword timeout has occurred.</shortdoc>
 </kw>
-<kw name="Run Keyword Unless" lineno="2035">
+<kw name="Run Keyword Unless" lineno="2037">
 <arguments repr="condition, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -2078,7 +2078,7 @@ this keyword does not support ``ELSE`` or ``ELSE IF`` branches like
 `Run Keyword If` does, though.</doc>
 <shortdoc>Runs the given keyword with the given arguments if ``condition`` is false.</shortdoc>
 </kw>
-<kw name="Run Keywords" lineno="1870">
+<kw name="Run Keywords" lineno="1872">
 <arguments repr="*keywords">
 <arg kind="VAR_POSITIONAL" required="false" repr="*keywords">
 <name>keywords</name>
@@ -2115,7 +2115,7 @@ string as argument, you can either use variables or escape it with
 a backslash like ``\AND``.</doc>
 <shortdoc>Executes all the given keywords in a sequence.</shortdoc>
 </kw>
-<kw name="Set Global Variable" lineno="1777">
+<kw name="Set Global Variable" lineno="1779">
 <arguments repr="name, *values">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2141,7 +2141,7 @@ used with care.
 See `Set Suite Variable` for more information and examples.</doc>
 <shortdoc>Makes a variable available globally in all tests and suites.</shortdoc>
 </kw>
-<kw name="Set Library Search Order" lineno="3110">
+<kw name="Set Library Search Order" lineno="3112">
 <arguments repr="*search_order">
 <arg kind="VAR_POSITIONAL" required="false" repr="*search_order">
 <name>search_order</name>
@@ -2223,7 +2223,7 @@ that want to set local variables.
 New in Robot Framework 3.2.</doc>
 <shortdoc>Makes a variable available everywhere within the local scope.</shortdoc>
 </kw>
-<kw name="Set Log Level" lineno="2993">
+<kw name="Set Log Level" lineno="2995">
 <arguments repr="level">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="level">
 <name>level</name>
@@ -2239,7 +2239,7 @@ The available levels: TRACE, DEBUG, INFO (default), WARN, ERROR and NONE (no
 logging).</doc>
 <shortdoc>Sets the log threshold to the specified level and returns the old level.</shortdoc>
 </kw>
-<kw name="Set Suite Documentation" lineno="3429">
+<kw name="Set Suite Documentation" lineno="3431">
 <arguments repr="doc, append=False, top=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="doc">
 <name>doc</name>
@@ -2268,7 +2268,7 @@ The documentation of the current suite is available as a built-in
 variable ``${SUITE DOCUMENTATION}``.</doc>
 <shortdoc>Sets documentation for the current test suite.</shortdoc>
 </kw>
-<kw name="Set Suite Metadata" lineno="3449">
+<kw name="Set Suite Metadata" lineno="3451">
 <arguments repr="name, value, append=False, top=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2300,7 +2300,7 @@ The metadata of the current suite is available as a built-in variable
 variable directly has no effect on the actual metadata the suite has.</doc>
 <shortdoc>Sets metadata for the current test suite.</shortdoc>
 </kw>
-<kw name="Set Suite Variable" lineno="1713">
+<kw name="Set Suite Variable" lineno="1715">
 <arguments repr="name, *values">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2361,7 +2361,7 @@ Variable`, `Variable Should Exist`, `Variable Should Not Exist` and
 `Get Variable Value` keywords.</doc>
 <shortdoc>Makes a variable available everywhere within the scope of the current suite.</shortdoc>
 </kw>
-<kw name="Set Tags" lineno="3472">
+<kw name="Set Tags" lineno="3474">
 <arguments repr="*tags">
 <arg kind="VAR_POSITIONAL" required="false" repr="*tags">
 <name>tags</name>
@@ -2382,7 +2382,7 @@ See `Remove Tags` if you want to remove certain tags and `Fail` if
 you want to fail the test case after setting and/or removing tags.</doc>
 <shortdoc>Adds given ``tags`` for the current test or all tests in a suite.</shortdoc>
 </kw>
-<kw name="Set Task Variable" lineno="1704">
+<kw name="Set Task Variable" lineno="1706">
 <arguments repr="name, *values">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
 <name>name</name>
@@ -2397,7 +2397,7 @@ This is an alias for `Set Test Variable` that is more applicable when
 creating tasks, not tests.</doc>
 <shortdoc>Makes a variable available everywhere within the scope of the current task.</shortdoc>
 </kw>
-<kw name="Set Test Documentation" lineno="3410">
+<kw name="Set Test Documentation" lineno="3412">
 <arguments repr="doc, append=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="doc">
 <name>doc</name>
@@ -2418,7 +2418,7 @@ The current test documentation is available as a built-in variable
 setup or suite teardown.</doc>
 <shortdoc>Sets documentation for the current test case.</shortdoc>
 </kw>
-<kw name="Set Test Message" lineno="3357">
+<kw name="Set Test Message" lineno="3359">
 <arguments repr="message, append=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="message">
 <name>message</name>
@@ -2467,6 +2467,8 @@ scope of the currently executed test case. For example, if you set a
 variable in a user keyword, it is available both in the test case level
 and also in all other user keywords used in the current test. Other
 test cases will not see variables set with this keyword.
+It is an error to call `Set Test Variable` outside the
+scope of a test (e.g. in a Suite Setup or Teardown).
 
 See `Set Suite Variable` for more information and examples.</doc>
 <shortdoc>Makes a variable available everywhere within the scope of the current test.</shortdoc>
@@ -2497,7 +2499,7 @@ scope where they are created. See `Set Global Variable`,
 set variables so that they are available also in a larger scope.</doc>
 <shortdoc>Returns the given values which can then be assigned to a variables.</shortdoc>
 </kw>
-<kw name="Set Variable If" lineno="2356">
+<kw name="Set Variable If" lineno="2358">
 <arguments repr="condition, *values">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -3559,7 +3561,7 @@ error message with ``msg`` and ``values``, as well as for semantics
 of the ``ignore_case``, ``strip_spaces``, and ``collapse_spaces`` options.</doc>
 <shortdoc>Fails if the string ``str1`` does not start with the string ``str2``.</shortdoc>
 </kw>
-<kw name="Skip" lineno="2509">
+<kw name="Skip" lineno="2511">
 <arguments repr="msg=Skipped with Skip keyword.">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="msg=Skipped with Skip keyword.">
 <name>msg</name>
@@ -3572,7 +3574,7 @@ Skips the remaining keywords in the current test and sets the given
 message to the test. If the test has teardown, it will be executed.</doc>
 <shortdoc>Skips the rest of the current test.</shortdoc>
 </kw>
-<kw name="Skip If" lineno="2517">
+<kw name="Skip If" lineno="2519">
 <arguments repr="condition, msg=None">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="condition">
 <name>condition</name>
@@ -3591,7 +3593,7 @@ be used as the message. If the test has teardown, it will be executed.
 If the ``condition`` evaluates to False, does nothing.</doc>
 <shortdoc>Skips the rest of the current test if the ``condition`` is True.</shortdoc>
 </kw>
-<kw name="Sleep" lineno="2798">
+<kw name="Sleep" lineno="2800">
 <arguments repr="time_, reason=None">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="time_">
 <name>time_</name>
@@ -3658,7 +3660,7 @@ The default error message can be overridden with the ``msg`` argument.
 See also `Variable Should Exist` and `Keyword Should Exist`.</doc>
 <shortdoc>Fails if the given variable exists within the current scope.</shortdoc>
 </kw>
-<kw name="Wait Until Keyword Succeeds" lineno="2274">
+<kw name="Wait Until Keyword Succeeds" lineno="2276">
 <arguments repr="retry, retry_interval, name, *args">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="retry">
 <name>retry</name>
