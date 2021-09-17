@@ -1,92 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210914 17:37:52.903" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210916 13:16:02.646" rpa="false" schemaversion="2">
 <suite id="s1" name="TC002" source="C:\robot_Sonda\robot-sonda-sd\robot-sonda-sd\robot-sonda-bo\TC002.robot">
-<test id="s1-t1" name="Loggin">
+<test id="s1-t1" name="LoginSondaBO">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://190.149.249.218:8088</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210914 17:37:53.229" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
-<status status="PASS" starttime="20210914 17:37:53.229" endtime="20210914 17:38:01.081"/>
+<msg timestamp="20210916 13:16:03.004" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
+<status status="PASS" starttime="20210916 13:16:03.003" endtime="20210916 13:16:11.343"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtUsuario</arg>
 <arg>gerente@diprocom</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:01.082" level="INFO">Typing text 'gerente@diprocom' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
-<status status="PASS" starttime="20210914 17:38:01.082" endtime="20210914 17:38:01.207"/>
+<msg timestamp="20210916 13:16:11.344" level="INFO">Typing text 'gerente@diprocom' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
+<status status="PASS" starttime="20210916 13:16:11.344" endtime="20210916 13:16:11.474"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>1237710</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:01.208" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
-<status status="PASS" starttime="20210914 17:38:01.207" endtime="20210914 17:38:01.318"/>
+<msg timestamp="20210916 13:16:11.475" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
+<status status="PASS" starttime="20210916 13:16:11.474" endtime="20210916 13:16:11.581"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20210914 17:38:01.319" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
-<msg timestamp="20210914 17:38:01.690" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20210914 17:38:01.690" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20210914 17:38:01.319" endtime="20210914 17:38:01.704"/>
+<msg timestamp="20210916 13:16:11.583" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
+<msg timestamp="20210916 13:16:11.951" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210916 13:16:11.951" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210916 13:16:11.582" endtime="20210916 13:16:11.965"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210914 17:38:03.713" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210914 17:38:01.705" endtime="20210914 17:38:03.713"/>
+<msg timestamp="20210916 13:16:13.973" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210916 13:16:11.966" endtime="20210916 13:16:13.973"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:03.714" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
-<status status="PASS" starttime="20210914 17:38:03.714" endtime="20210914 17:38:03.763"/>
+<msg timestamp="20210916 13:16:13.974" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
+<status status="PASS" starttime="20210916 13:16:13.973" endtime="20210916 13:16:14.022"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210914 17:38:08.770" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210914 17:38:03.764" endtime="20210914 17:38:08.771"/>
+<msg timestamp="20210916 13:16:19.035" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210916 13:16:14.022" endtime="20210916 13:16:19.035"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:08.772" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
-<status status="PASS" starttime="20210914 17:38:08.772" endtime="20210914 17:38:08.859"/>
+<msg timestamp="20210916 13:16:19.035" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
+<status status="PASS" starttime="20210916 13:16:19.035" endtime="20210916 13:16:19.094"/>
 </kw>
-<tag>LoginSondaBO</tag>
-<status status="PASS" starttime="20210914 17:37:53.228" endtime="20210914 17:38:08.862"/>
+<tag>login</tag>
+<status status="PASS" starttime="20210916 13:16:03.002" endtime="20210916 13:16:19.095"/>
 </test>
-<test id="s1-t2" name=" Catalogos-SKU">
+<test id="s1-t2" name="Catalogos-bodegas">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:08.865" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
-<status status="PASS" starttime="20210914 17:38:08.865" endtime="20210914 17:38:08.931"/>
+<msg timestamp="20210916 13:16:19.099" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
+<status status="PASS" starttime="20210916 13:16:19.098" endtime="20210916 13:16:19.164"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]</arg>
+<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210914 17:38:08.932" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]'.</msg>
-<status status="PASS" starttime="20210914 17:38:08.931" endtime="20210914 17:38:09.001"/>
+<msg timestamp="20210916 13:16:19.165" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]'.</msg>
+<status status="PASS" starttime="20210916 13:16:19.164" endtime="20210916 13:16:19.234"/>
 </kw>
-<tag>sku</tag>
-<status status="PASS" starttime="20210914 17:38:08.864" endtime="20210914 17:38:09.002"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210916 13:16:21.235" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210916 13:16:19.235" endtime="20210916 13:16:21.235"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI0_"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210916 13:16:26.451" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210916 13:16:26.267" endtime="20210916 13:16:26.451"/>
+</kw>
+<msg timestamp="20210916 13:16:26.476" level="FAIL">Element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI0_"]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210916 13:16:21.236" endtime="20210916 13:16:26.476"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI0_"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210916 13:16:26.477" endtime="20210916 13:16:26.477"/>
+</kw>
+<tag>bodegas</tag>
+<status status="FAIL" starttime="20210916 13:16:19.097" endtime="20210916 13:16:26.478">Element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI0_"]' did not appear in 5 seconds.</status>
 </test>
-<status status="PASS" starttime="20210914 17:37:52.905" endtime="20210914 17:38:09.005"/>
+<status status="FAIL" starttime="20210916 13:16:02.648" endtime="20210916 13:16:26.481"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">LoginSondaBO</stat>
-<stat pass="1" fail="0" skip="0">sku</stat>
+<stat pass="0" fail="1" skip="0">bodegas</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="TC002">TC002</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="TC002">TC002</stat>
 </suite>
 </statistics>
 <errors>
