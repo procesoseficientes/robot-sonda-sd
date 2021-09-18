@@ -1,182 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210916 19:03:53.133" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210917 17:58:51.746" rpa="false" schemaversion="2">
 <suite id="s1" name="TC002" source="C:\robot_Sonda\robot-sonda-sd\robot-sonda-sd\robot-sonda-bo\TC002.robot">
-<test id="s1-t1" name="LoginSondaBO">
+<test id="s1-t1" name=" Catalogos-ListaPrecios">
+<kw name="Login">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://190.149.249.218:8088</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210916 19:03:53.460" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
-<status status="PASS" starttime="20210916 19:03:53.460" endtime="20210916 19:03:57.245"/>
+<msg timestamp="20210917 17:58:52.045" level="INFO">Opening browser 'chrome' to base url 'http://190.149.249.218:8088'.</msg>
+<status status="PASS" starttime="20210917 17:58:52.045" endtime="20210917 17:59:05.044"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210916 19:03:57.291" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<status status="FAIL" starttime="20210916 19:03:57.259" endtime="20210916 19:03:57.291"/>
-</kw>
-<msg timestamp="20210916 19:03:57.291" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<msg timestamp="20210916 19:03:57.306" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<status status="FAIL" starttime="20210916 19:03:57.246" endtime="20210916 19:03:57.306"/>
+<status status="PASS" starttime="20210917 17:59:05.044" endtime="20210917 17:59:05.164"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtUsuario</arg>
 <arg>gerente@diprocom</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.307" endtime="20210916 19:03:57.307"/>
+<msg timestamp="20210917 17:59:05.164" level="INFO">Typing text 'gerente@diprocom' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
+<status status="PASS" starttime="20210917 17:59:05.164" endtime="20210917 17:59:05.266"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>1237710</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.308" endtime="20210916 19:03:57.308"/>
+<msg timestamp="20210917 17:59:05.267" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
+<status status="PASS" starttime="20210917 17:59:05.266" endtime="20210917 17:59:05.354"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.309" endtime="20210916 19:03:57.309"/>
+<msg timestamp="20210917 17:59:05.355" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
+<msg timestamp="20210917 17:59:05.630" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210917 17:59:05.630" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210917 17:59:05.354" endtime="20210917 17:59:05.644"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.309" endtime="20210916 19:03:57.309"/>
+<msg timestamp="20210917 17:59:07.659" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:05.644" endtime="20210917 17:59:07.659"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.310" endtime="20210916 19:03:57.310"/>
+<msg timestamp="20210917 17:59:07.660" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
+<status status="PASS" starttime="20210917 17:59:07.659" endtime="20210917 17:59:07.706"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.310" endtime="20210916 19:03:57.310"/>
+<msg timestamp="20210917 17:59:12.712" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:07.706" endtime="20210917 17:59:12.712"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.311" endtime="20210916 19:03:57.311"/>
+<msg timestamp="20210917 17:59:12.712" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
+<status status="PASS" starttime="20210917 17:59:12.712" endtime="20210917 17:59:31.687"/>
 </kw>
-<tag>login</tag>
-<status status="FAIL" starttime="20210916 19:03:53.459" endtime="20210916 19:03:57.312">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</status>
-</test>
-<test id="s1-t2" name=" Catalogos-ListaPrecios">
+<status status="PASS" starttime="20210917 17:58:52.044" endtime="20210917 17:59:31.687"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 17:59:34.693" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:31.688" endtime="20210917 17:59:34.694"/>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210916 19:03:57.315" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210916 19:03:57.328" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<status status="FAIL" starttime="20210916 19:03:57.318" endtime="20210916 19:03:57.328"/>
-</kw>
-<msg timestamp="20210916 19:03:57.328" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<msg timestamp="20210916 19:03:57.332" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<status status="FAIL" starttime="20210916 19:03:57.314" endtime="20210916 19:03:57.332"/>
+<msg timestamp="20210917 17:59:34.698" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
+<status status="PASS" starttime="20210917 17:59:34.697" endtime="20210917 17:59:34.748"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.333" endtime="20210916 19:03:57.334"/>
+<msg timestamp="20210917 17:59:39.753" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:34.748" endtime="20210917 17:59:39.754"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.335" endtime="20210916 19:03:57.335"/>
+<msg timestamp="20210917 17:59:39.755" level="INFO">Clicking element 'id=ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7'.</msg>
+<status status="PASS" starttime="20210917 17:59:39.754" endtime="20210917 17:59:39.831"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>12</arg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.336" endtime="20210916 19:03:57.336"/>
+<msg timestamp="20210917 17:59:49.834" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:39.832" endtime="20210917 17:59:49.834"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.336" endtime="20210916 19:03:57.337"/>
+<msg timestamp="20210917 17:59:49.837" level="INFO">Selecting frame 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]'.</msg>
+<status status="PASS" starttime="20210917 17:59:49.837" endtime="20210917 17:59:50.751"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_T"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.337" endtime="20210916 19:03:57.337"/>
+<msg timestamp="20210917 17:59:50.753" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_T"]'.</msg>
+<status status="PASS" starttime="20210917 17:59:50.752" endtime="20210917 17:59:50.994"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=split_pgcDet_ASPxFormLayout1_txtCodigo_I</arg>
-<arg>123</arg>
+<arg>000321</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.338" endtime="20210916 19:03:57.338"/>
+<msg timestamp="20210917 17:59:50.995" level="INFO">Typing text '000321' into text field 'id=split_pgcDet_ASPxFormLayout1_txtCodigo_I'.</msg>
+<status status="PASS" starttime="20210917 17:59:50.995" endtime="20210917 17:59:51.114"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]</arg>
 <arg>11111</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.338" endtime="20210916 19:03:57.338"/>
+<msg timestamp="20210917 17:59:51.115" level="INFO">Typing text '11111' into text field 'xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]'.</msg>
+<status status="PASS" starttime="20210917 17:59:51.114" endtime="20210917 17:59:51.222"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//*[@id="split_pgcDet_ASPxFormLayout1_memComentario_I"]</arg>
 <arg>PruebasAutomaticasConRobotFramework</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.339" endtime="20210916 19:03:57.339"/>
+<msg timestamp="20210917 17:59:51.223" level="INFO">Typing text 'PruebasAutomaticasConRobotFramework' into text field 'xpath=//*[@id="split_pgcDet_ASPxFormLayout1_memComentario_I"]'.</msg>
+<status status="PASS" starttime="20210917 17:59:51.222" endtime="20210917 17:59:51.378"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.339" endtime="20210916 19:03:57.339"/>
+<msg timestamp="20210917 17:59:54.392" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:51.379" endtime="20210917 17:59:54.393"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI2_T"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20210916 19:03:57.341" endtime="20210916 19:03:57.341"/>
+<msg timestamp="20210917 17:59:54.394" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI2_T"]'.</msg>
+<status status="PASS" starttime="20210917 17:59:54.394" endtime="20210917 17:59:54.510"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:00.516" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20210917 17:59:54.511" endtime="20210917 18:00:00.516"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_gridPriceList_DXFREditorcol0_I"]</arg>
+<arg>000321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:00.519" level="INFO">Typing text '000321' into text field 'xpath=//*[@id="split_gridPriceList_DXFREditorcol0_I"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:00.519" endtime="20210917 18:00:00.646"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>35</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:35.656" level="INFO">Slept 35 seconds</msg>
+<status status="PASS" starttime="20210917 18:00:00.646" endtime="20210917 18:00:35.657"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_T1T"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:35.658" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_T1T"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:35.658" endtime="20210917 18:00:35.786"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:39.793" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210917 18:00:35.786" endtime="20210917 18:00:39.793"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:39.797" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:39.797" endtime="20210917 18:00:39.939"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_DXDataRow1"]/td[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:39.939" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_DXDataRow1"]/td[1]'.</msg>
+<status status="PASS" starttime="20210917 18:00:39.939" endtime="20210917 18:00:40.073"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:42.087" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210917 18:00:40.073" endtime="20210917 18:00:42.087"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_StatusBar_btnAceptarCustumer_0"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:42.088" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_StatusBar_btnAceptarCustumer_0"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:42.088" endtime="20210917 18:00:42.178"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:43.192" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210917 18:00:42.179" endtime="20210917 18:00:43.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_T2T"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:43.193" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_T2T"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:43.193" endtime="20210917 18:00:43.346"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:44.352" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210917 18:00:43.347" endtime="20210917 18:00:44.352"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookSku_B-1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:44.353" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookSku_B-1"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:44.353" endtime="20210917 18:00:44.517"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXDataRow0"]/td[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:44.518" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXDataRow0"]/td[1]'.</msg>
+<status status="PASS" starttime="20210917 18:00:44.518" endtime="20210917 18:00:44.665"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210917 18:00:45.671" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210917 18:00:44.666" endtime="20210917 18:00:45.671"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210917 18:00:45.673" level="INFO">Clicking element 'xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]'.</msg>
+<status status="PASS" starttime="20210917 18:00:45.672" endtime="20210917 18:00:45.774"/>
 </kw>
 <tag>precios</tag>
-<status status="FAIL" starttime="20210916 19:03:57.313" endtime="20210916 19:03:57.342">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</status>
+<status status="PASS" starttime="20210917 17:58:52.043" endtime="20210917 18:00:45.775"/>
 </test>
-<status status="FAIL" starttime="20210916 19:03:53.135" endtime="20210916 19:03:57.343"/>
+<status status="PASS" starttime="20210917 17:58:51.748" endtime="20210917 18:00:45.776"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">login</stat>
-<stat pass="0" fail="1" skip="0">precios</stat>
+<stat pass="1" fail="0" skip="0">precios</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="TC002">TC002</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC002">TC002</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210916 19:03:57.291" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
-<msg timestamp="20210916 19:03:57.328" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
-</msg>
 </errors>
 </robot>
