@@ -6,7 +6,7 @@ Library    SeleniumLibrary
 Login
     Open Browser    http://190.149.249.218:8088         chrome
     maximize browser window    
-    Input Text      name=UiCalllbackPanel$txtUsuario    gerente@diprocom
+    Input Text      name=UiCalllbackPanel$txtUsuario    gerente04@diprocom
     Input Text      name=UiCalllbackPanel$txtPass            1237710
     Press Keys      name=UiCalllbackPanel$txtPass            ENTER
     Sleep    2
@@ -24,7 +24,7 @@ Login
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
     Click Element    id=ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7   
-    sleep    10
+    sleep    7
     #agregar precio  
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_T"]
@@ -49,6 +49,7 @@ Login
     Click Element    xpath=//*[@id="split_pgcDet_T2T"]
     sleep    1
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_B-1"]
+    sleep    3
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXDataRow0"]/td[1]
     sleep    1
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]
@@ -63,9 +64,6 @@ Catalogos-bodegas
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]                   
-    sleep    12
-     
-    #no funciona    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4"]  
                         
     
     
@@ -74,8 +72,24 @@ Catalogos-portafolioProductos
     Login
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    
-
+    sleep    5
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_10I"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_"]
+    sleep    2
+    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtCodigo_I"]     2222
+    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]     2222
+    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_memComentario_I"]     pruebasAutomaticasConRobotFramework
+    Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI2_T"]
+    sleep    10
+    Input Text    xpath=//*[@id="split_gridPoftfolio_DXFREditorcol0_I"]     2222
+    sleep    10
+    Click Element    xpath=//*[@id="split_pgcDet_T1"]
+   #No funciona todavia
+   Click Element    id=split_pgcDet_gridLoopVendedor_B-1
+   # Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_DDD_gv_DXDataRow0"]/td[1]
     
 Catalogos-SeguridadYRoles
     [Tags]    seguridad
