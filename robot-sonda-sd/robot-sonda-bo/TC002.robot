@@ -20,7 +20,7 @@ Login
  Catalogos-ListaPrecios
     [Tags]    precios
     Login
-    sleep    3
+    sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
     Click Element    id=ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7   
@@ -60,7 +60,7 @@ Login
 Catalogos-bodegas
     [Tags]    bodegas
     Login
-    sleep    3
+    sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]                   
@@ -70,7 +70,7 @@ Catalogos-bodegas
 Catalogos-portafolioProductos
     [Tags]    portafolio
     Login
-    sleep    3
+    sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_10I"]
@@ -83,22 +83,50 @@ Catalogos-portafolioProductos
     Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]     2222
     Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_memComentario_I"]     pruebasAutomaticasConRobotFramework
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI2_T"]
-    sleep    10
+    sleep    6
     Input Text    xpath=//*[@id="split_gridPoftfolio_DXFREditorcol0_I"]     2222
     sleep    10
+    Click Element    xpath=//*[@id="split_gridPoftfolio_DXDataRow0"]/td[1]
+    sleep    2
+    #ingreso de vendedores
     Click Element    xpath=//*[@id="split_pgcDet_T1"]
-   #No funciona todavia
-   Click Element    id=split_pgcDet_gridLoopVendedor_B-1
-   # Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_DDD_gv_DXDataRow0"]/td[1]
+    sleep    2
+    
+    Click Element    xpath=//*[@id="split_1_S_CB"]    #se agrando el apartado vendedores
+    sleep    3
+    Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_B-1"]
+    sleep    1
+    Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_DDD_gv_DXSelBtn0_D"]
+    Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_DDD_gv_DXSelBtn4_D"]
+    sleep    1
+    Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_DDD_gv_StatusBar_btnAceptarSeller_0"]
+    sleep    2
+    Click Element    xpath=//*[@id="split_1_S_CF"]    #se encoge el apartado vendedores
+    sleep    3
+    #ingreso de productos
+    Click Element    xpath=//*[@id="split_pgcDet_T2T"]
+    Click Element    xpath=//*[@id="split_1_S"]/div/table/tbody/tr[1]    #se agrando el apartado productos
+    sleep    1
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_B-1"]
+    sleep    3
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXDataRow0"]/td[1]
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXSelBtn3_D"]
+    sleep    2
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]
+    sleep    2
+    Click Element    xpath=//*[@id="split_1_S_CF"]    #se encoge el apartado productos
     
 Catalogos-SeguridadYRoles
     [Tags]    seguridad
     Login
-    sleep    3
+    sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    Click Element    xpath=//*[@id="split_1_S_CB"]    
     
-
-
+Catalogos/Rutas
+    [Tags]    rutas
+    Login
+    sleep    2
 
 
     
