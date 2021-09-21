@@ -66,10 +66,42 @@ Catalogos-bodegas
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]                   
-                        
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_0"]      
+    #agregar bodegas
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI0_T"] 
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxTextBox3_I"]     RP1
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxTextBoxBarCode_I"]     No-posee
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMemo1_I"]     Bodega-creada-con-Robot-Framework
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMemoBdec_I"]     PruebasRobotFramework 
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxComboBox6_B-1"]  
+    sleep    2   
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxComboBox6_DDD_L_LBT"]/tbody/tr[3]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxComboBox5_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxComboBox5_DDD_L_LBT"]/tbody/tr[2]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxCmbERPBod_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxCmbERPBod_DDD_L_LBT"]/tbody/tr[56]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxSpinEditGPSX_B-2"]
+    sleep    1
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxSpinEditGPSY_B-2"]
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMemoDirec_I"]     Guatemala
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_UiListaCentrosDeDistribucion_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_UiListaCentrosDeDistribucion_DDD_gv_DXDataRow0"]/td[1]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_UIcheckbox_S_D"]   
+    sleep    1
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout2_ASPxMenu4_DXI2_T"]
+    sleep    5
+    #Unselect frame
     
-    
+    Select frame    xpath=//*[@id="ASPxSplitter1_0_CC"]
+    sleep    5
+    Input Text    xpath=//*[@id="ASPxGridView1_DXFREditorcol1_I"]  RP1
+    sleep    3
+    Click element    xpath=//*[@id="ASPxGridView1_DXDataRow0"]/td[1]
+
 Catalogos-portafolioProductos
     [Tags]    portafolio
     Login
@@ -146,5 +178,4 @@ Catalogos/Rutas
     Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     423
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[1]
-    #Ingreso 
     
