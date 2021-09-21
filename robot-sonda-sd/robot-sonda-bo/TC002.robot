@@ -37,10 +37,13 @@ Login
     #busqueda de precio
     Input Text    xpath=//*[@id="split_gridPriceList_DXFREditorcol0_I"]     000321             
     sleep    35
+    Click Element    xpath=//*[@id="split_gridPriceList_DXDataRow0"]/td[1]
     #ingreso de cliente
+    sleep    2
     Click Element    xpath=//*[@id="split_pgcDet_T1T"]                 
-    sleep    4
-    Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]              
+    sleep    14
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]    
+    sleep    3          
     Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_DXDataRow1"]/td[1]          
     sleep    2            
     Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_StatusBar_btnAceptarCustumer_0"]  
@@ -91,7 +94,6 @@ Catalogos-portafolioProductos
     #ingreso de vendedores
     Click Element    xpath=//*[@id="split_pgcDet_T1"]
     sleep    2
-    
     Click Element    xpath=//*[@id="split_1_S_CB"]    #se agrando el apartado vendedores
     sleep    3
     Click Element    xpath=//*[@id="split_pgcDet_gridLoopVendedor_B-1"]
@@ -127,8 +129,21 @@ Catalogos/Rutas
     [Tags]    rutas
     Login
     sleep    2
-
-
-    
-    
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_3"]
+    Sleep    5
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI0_T"]
+    sleep    1
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxTextBox1_I"]     423
+    Input text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxTextBox2_I"]     Ruta423
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxTextBox3_I"]     Ninguna
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMemo1_I"]        RutaPruebaAutomaticaConRobotFramework
+    sleep    3
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
+    sleep    5
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     423
+    sleep    3
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[1]
     
