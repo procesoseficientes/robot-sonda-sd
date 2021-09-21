@@ -146,4 +146,5 @@ Catalogos/Rutas
     Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     423
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[1]
+    #Ingreso 
     
