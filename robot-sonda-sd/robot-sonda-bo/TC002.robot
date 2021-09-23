@@ -27,6 +27,8 @@ Login
     sleep    7
     #agregar precio  
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    5
+    Click Element    xpath=//*[@id="split_pgcDet_T0T"]
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_T"]
     Input Text    id=split_pgcDet_ASPxFormLayout1_txtCodigo_I     000321
     Input Text      xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]          11111
@@ -36,30 +38,27 @@ Login
     sleep    6
     #busqueda de precio
     Input Text    xpath=//*[@id="split_gridPriceList_DXFREditorcol0_I"]     000321             
-    sleep    35
+    sleep    40
     Click Element    xpath=//*[@id="split_gridPriceList_DXDataRow0"]/td[1]
     #ingreso de cliente
     sleep    2
     Click Element    xpath=//*[@id="split_pgcDet_T1T"]                 
-    sleep    14
+    sleep    13
     Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]    
-    sleep    3          
+    sleep    18          
     Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_DXDataRow1"]/td[1]          
     sleep    2            
     Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_StatusBar_btnAceptarCustumer_0"]  
     sleep    1
     #ingreso de producto
     Click Element    xpath=//*[@id="split_pgcDet_T2T"]
-    sleep    1
+    sleep    8
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_B-1"]
-    sleep    3
+    sleep    14
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_DXDataRow0"]/td[1]
     sleep    1
     Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]
     
-          
-    
-     
 Catalogos-bodegas
     [Tags]    bodegas
     Login
@@ -112,12 +111,12 @@ Catalogos-portafolioProductos
     sleep    2
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_"]
     sleep    2
-    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtCodigo_I"]     2222
-    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]     2222
+    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtCodigo_I"]     22221
+    Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]     22221
     Input Text    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_memComentario_I"]     pruebasAutomaticasConRobotFramework
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI2_T"]
     sleep    6
-    Input Text    xpath=//*[@id="split_gridPoftfolio_DXFREditorcol0_I"]     2222
+    Input Text    xpath=//*[@id="split_gridPoftfolio_DXFREditorcol0_I"]     22221
     sleep    10
     Click Element    xpath=//*[@id="split_gridPoftfolio_DXDataRow0"]/td[1]
     sleep    2
@@ -207,6 +206,8 @@ Catalogos/SKUs
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    1
     Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol1_I"]     1015
+    sleep    2
+    Click Element   xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[2]
     
 Catalogos/clientes
     [Tags]    cliente
@@ -219,4 +220,7 @@ Catalogos/clientes
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    1
     Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     100
+    #Seleccionar 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
     
