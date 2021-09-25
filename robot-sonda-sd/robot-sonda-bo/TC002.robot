@@ -221,6 +221,10 @@ Catalogos/clientes
     sleep    1
     Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     100
     #Seleccionar 
-    sleep    2
+    sleep    5
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
-    
+                                                    
+    #Obtener dato de columna codigo para comparar  
+    ${nombre_cliente} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
+    ${slideBar_nombre_cliente} =    Execute Javascript    return document.getElementsByClassName("dxic")[0].getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0]
+    Log To Console    ${slideBar_nombre_cliente}
