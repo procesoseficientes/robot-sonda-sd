@@ -224,7 +224,17 @@ Catalogos/clientes
     sleep    5
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
                                                     
-    #Obtener dato de columna codigo para comparar  
+    #Obtener dato de columna codigo para comparar con el siguiente   
     ${nombre_cliente} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
-    ${slideBar_nombre_cliente} =    Execute Javascript    return document.getElementsByClassName("dxic")[0].getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0]
-    Log To Console    ${slideBar_nombre_cliente}
+    #Obtener dato de input codigo para comparar con el anterior
+    ${slideBar_nombre_cliente} =    Execute Javascript    return document.getElementsByClassName("dxic")[0].getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
+    
+    IF    ${nombre_cliente} == ${slideBar_nombre_cliente}
+    Pass Execution    Los datos SI coinciden   
+    ELSE 
+    Fail    Los datos NO coinciden  
+    END
+    
+    #Obtener dato de la columna 
+    
+    #Log To Console    ${nombre_cliente}
