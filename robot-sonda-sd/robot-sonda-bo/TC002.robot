@@ -219,22 +219,44 @@ Catalogos/clientes
     sleep    1
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    1
-    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     100
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     1001
     #Seleccionar 
-    sleep    5
+    sleep    7
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
                                                     
     #Obtener dato de columna codigo para comparar con el siguiente   
-    ${nombre_cliente} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
+    ${codigo} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
     #Obtener dato de input codigo para comparar con el anterior
-    ${slideBar_nombre_cliente} =    Execute Javascript    return document.getElementsByClassName("dxic")[0].getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
+    ${input_codigo} =    Execute Javascript    return document.getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
     
-    IF    ${nombre_cliente} == ${slideBar_nombre_cliente}
-    Pass Execution    Los datos SI coinciden   
+
+    #Obtener dato de la columna Nombre Cliente para comparar con el siguiente
+    ${nombre_cliente} =    Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[2].innerHTML
+    #Obtener dato del input Nombre cliente para comparar con el anterior 
+    
+    # Validacion del campo codigo 
+    IF    ${codigo} == ${input_codigo}
+    Pass Execution    Los datos del campo codigo SI coinciden   
     ELSE 
-    Fail    Los datos NO coinciden  
+    Fail    Los datos del campo codigo NO coinciden  
     END
     
-    #Obtener dato de la columna 
+Catalgos/Clasificaciones
+    [Tags]    clasificacion
+    Login
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    3
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_4"]
+    sleep    1
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI0_T"]
+    sleep    1
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxTextBox1_I"]     pruebaTestAutomatico
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxSpinEdit1_B-2"]
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxTextBox2_I"]     prueba con robot framework 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
+   
     
-    #Log To Console    ${nombre_cliente}
