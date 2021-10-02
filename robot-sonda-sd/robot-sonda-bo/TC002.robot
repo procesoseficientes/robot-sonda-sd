@@ -241,7 +241,7 @@ Catalogos/clientes
     Fail    Los datos del campo codigo NO coinciden  
     END
     
-Catalgos/Clasificaciones
+Catalogos/Clasificaciones
     [Tags]    clasificacion
     Login
     sleep    2
@@ -259,4 +259,21 @@ Catalgos/Clasificaciones
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
    
+Catalogos/Usuarios
+    [Tags]    usuario
+    Login
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    3
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_5"]
+    sleep    1
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiTxtLoginUsuario_I"]     Prueba
+    sleep    1
+    Click Element   xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_B-1"]
+    sleep    1
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_DDD_L_LBI2T0"]
+    
+        
     
