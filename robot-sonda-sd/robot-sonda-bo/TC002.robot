@@ -154,6 +154,7 @@ Catalogos-SeguridadYRoles    #pendiente
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9I"]
+    sleep    2
     Click Element    xpath=//*[@id="MainSplitter_FormEditRole_UiMenuRole_DXI0_T"]
     
 Catalogos/Rutas
