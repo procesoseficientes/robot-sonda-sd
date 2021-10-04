@@ -28,7 +28,7 @@ Login
     #agregar precio  
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    5
-    Click Element    xpath=//*[@id="split_pgcDet_T0T"]
+    #Click Element    xpath=//*[@id="split_pgcDet_T0T"]
     Click Element    xpath=//*[@id="split_pgcDet_ASPxFormLayout1_menOpciones_DXI0_T"]
     Input Text    id=split_pgcDet_ASPxFormLayout1_txtCodigo_I     000321
     Input Text      xpath=//*[@id="split_pgcDet_ASPxFormLayout1_txtNombre_I"]          11111
