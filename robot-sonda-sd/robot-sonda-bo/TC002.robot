@@ -192,7 +192,7 @@ Sonda/Vendedores-En-Ruta
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiListaDeUsuarios_B-1"]
     sleep    2
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiListaDeUsuarios_DDD_gv_DXDataRow0"]/td[1]
-    sleep    1
+    sleep    5
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiMapaMenu_DXI0_T"]
     
 Catalogos/SKUs
