@@ -246,7 +246,7 @@ Catalogos/Clasificaciones
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_4"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7"]
     sleep    1
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
@@ -279,7 +279,6 @@ Catalogos/Usuarios
     Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaTipoUsuario_B-1"]
     sleep    2
     Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaTipoUsuario_DDD_gv_DXDataRow2"]/td[1]
-    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaRolUsuario_B-1"]
     sleep    2
     Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaRolUsuario_DDD_gv_DXDataRow3"]/td[2]
     sleep    3
