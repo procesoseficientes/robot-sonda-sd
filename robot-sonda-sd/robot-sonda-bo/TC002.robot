@@ -4,8 +4,10 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 Login
-    Open Browser    http://190.149.249.218:8088         chrome
+    Open Browser    http://52.149.161.64:8091         chrome
+    sleep    1
     maximize browser window    
+    sleep    1
     Input Text      name=UiCalllbackPanel$txtUsuario    gerente04@diprocom
     Input Text      name=UiCalllbackPanel$txtPass            1237710
     Press Keys      name=UiCalllbackPanel$txtPass            ENTER
