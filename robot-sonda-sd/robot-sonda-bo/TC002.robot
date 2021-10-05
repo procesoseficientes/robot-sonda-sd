@@ -4,9 +4,9 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 Login
-    Open Browser    http://190.149.249.218:8088         chrome
+    Open Browser    http://52.149.161.64:8091/FrontSwift/Login         chrome
     maximize browser window    
-    Input Text      name=UiCalllbackPanel$txtUsuario    gerente04@diprocom
+    Input Text      name=UiCalllbackPanel$txtUsuario    admin@cendalza
     Input Text      name=UiCalllbackPanel$txtPass            1237710
     Press Keys      name=UiCalllbackPanel$txtPass            ENTER
     Sleep    2
@@ -264,15 +264,29 @@ Catalogos/Usuarios
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_5"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9"]
     sleep    1
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
-    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiTxtLoginUsuario_I"]     Prueba
-    sleep    1
-    Click Element   xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_B-1"]
-    sleep    1
-    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_DDD_L_LBI2T0"]
+    #Agregar un nuevo usuario 
+    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiTxtLoginUsuario_I"]    Prueba
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiComboTipo_DDD_L_LBI1T0"]
+    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiTxtNombreUsuario_I"]    Juan Ramirez
+    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiTxtPasswordUsuario_I"]    231
+    sleep    2
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaTipoUsuario_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaTipoUsuario_DDD_gv_DXDataRow2"]/td[1]
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaRolUsuario_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiUsuariosPageControl_ASPxFormLayout3_UiListaRolUsuario_DDD_gv_DXDataRow3"]/td[2]
+    sleep    3
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiMenuOpcionesUsuario_DXI3_T"]
+    # Buscar usuario
+    Input Text    xpath=//*[@id="splitUser_ASPxFormLayout1_UiVistaUsuario_DXFREditorcol0_I"]    1020
+    Click Element    xpath=//*[@id="splitUser_ASPxFormLayout1_UiVistaUsuario_DXFREditorcol1_I"]
     
         
     
