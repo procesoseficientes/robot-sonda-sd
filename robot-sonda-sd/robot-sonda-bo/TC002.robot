@@ -327,39 +327,39 @@ Catalogos-portafolioProductos
     Click Element    xpath=//*[@id="split_1_S_CF"]    #se encoge el apartado productos
     
 
-Catalogos/Resoluciones
+Catalogos-Resoluciones
     [Tags]    resoluciones
     Login 
 
-Catalogos/Encuestas
+Catalogos-Encuestas
     [Tags]    encuestas
     Login 
 
-Catalogos/Frecuencias
+Catalogos-Frecuencias
     [Tags]    resoluciones
     Login
     
-Catalogos/SecuenciasDeDocumentos
+Catalogos-SecuenciasDeDocumentos
     [Tags]    SecuenciasDoc
     Login  
     
-Catalogos/UsuariosPorRuta
+Catalogos-UsuariosPorRuta
     [Tags]    usuariosRuta
     Login 
     
-Catalogos/CentrosDeDistribucion
+Catalogos-CentrosDeDistribucion
     [Tags]    distribucion
     Login
     
-Catalogos/Canales
+Catalogos-Canales
     [Tags]    canales
     Login  
     
-Catalogos/Moneda
+Catalogos-Moneda
     [Tags]    moneda
     Login 
             
-Catalogos/Configuracion de Combos
+Catalogos-Configuracion de Combos
     [Tags]    ConfCombos
     Login
     sleep    2
@@ -367,15 +367,15 @@ Catalogos/Configuracion de Combos
     sleep    3
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_19"]
     
-Catalogos/Equipos de ventas
+Catalogos-Equipos de ventas
     [Tags]    equiposVentas
     Login 
 
-Catalogos/MetasDeEquipo
+Catalogos-MetasDeEquipo
     [Tags]    metas
     Login 
     
-Catalogos/AdministrarLicencias
+Catalogos-AdministrarLicencias
     [Tags]    licencias
     Login 
 
@@ -383,7 +383,7 @@ Catalogos/AdministrarLicencias
  #                     ******************SONDA******************
  #######################################################################################
 
-Sonda/Vendedores-En-Ruta
+Sonda-Vendedores-En-Ruta
     [Tags]    vendedores
     Login
     sleep    2
@@ -400,22 +400,22 @@ Sonda/Vendedores-En-Ruta
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiMapaMenu_DXI0_"]
     
 
-Sonda/SeguimientoDeRuta
+Sonda-SeguimientoDeRuta
     [Tags]    seguimientoRuta
     Login    
-Sonda/TransferenciaDeProductos
+Sonda-TransferenciaDeProductos
     [Tags]    transferenciaProducto
     Login
     
-Sonda/CumplimientoDeRuta
+Sonda-CumplimientoDeRuta
     [Tags]    cumplimiento
     Login
     
-Sonda/LiquidacionRuta
+Sonda-LiquidacionRuta
     [Tags]    liquidacion
     Login
     
-Sonda/Microencuestas
+Sonda-Microencuestas
     [Tags]    microencuestas
     Login
 
@@ -423,13 +423,101 @@ Sonda/Microencuestas
 #                     ******************CONSULTAS******************
 #######################################################################################
 
+Consultas-EnvioAErp
+    [Tags]    envioERP
+    Login
+    
+Consultas-Poligonos
+    [Tags]    poligonos
+    Login
+    
+Consultas-Facturacion
+    [Tags]    facturacion
+    Login
+    
+Consultas-PerformanceDeRuta
+    [Tags]    performance
+    Login
+    
+Consultas-Scouting
+    [Tags]    scouting
+    Login
+    
+Consultas-OrdenesDeVenta
+    [Tags]    ordenesVenta
+    Login
+    
+Consultas-TomaDeInventario
+    [Tags]    tomaInventario
+    Login
+    
+Consultas-TareasSinGestion
+    [Tags]    tareaSinGestion
+    Login
+    
+Consultas-EficienciaSemanalDeRuta
+    [Tags]    eficiencia
+    Login
+    
+Consultas-VentasPorSKU
+    [Tags]    ventasSKU 
+    Login
+    
+Consultas-CambiosEnClientes
+    [Tags]    cambiosClientes
+    Login
+    
+Consultas-PoligonosPorVendedor
+    [Tags]    poligonosVendedor
+    Login
+    
+Consultas-FacturacionPorSKU
+    [Tags]    facturacionSKU
+    Login
+    
+Consultas-ReporteDeEncuesta
+    [Tags]    ReporteEncuesta
+    Login
+    
+Consultas-RecibosEmitidos
+    [Tags]    recibos
+    Login
 
-#######################################################################################    
+######################################################################################    
 #                     ******************POLIGONOS******************
 #######################################################################################
 
+Poligonos-ModeladoDePoligonos
+    [Tags]    modelado
+    Login    
+
+Poligonos-EstadisticasDePoligonos
+    [Tags]    estadisticas
+    Login
 #######################################################################################    
-#                     ******************BONIFICACIONES/DESCUENTOS******************
+#                     ******************BONIFICACIONES-DESCUENTOS******************
 #######################################################################################
 
-
+Bonificaciones/Descuentos-AcuerdosComerciales
+    [Tags]    acuerdos
+    Login
+    
+Bonificaciones/Descuentos-Bonificaciones
+    [Tags]    bonificaciones
+    Login
+    
+Bonificaciones/Descuentos-Descuentos
+    [Tags]    descuentos
+    Login
+    
+Bonificaciones/Descuentos-VentaMinima
+    [Tags]    ventaMinima
+    Login
+    
+Bonificaciones/Descuentos-PreciosEspeciales
+    [Tags]    preciosEspeciales
+    Login
+    
+Bonificaciones/Descuentos-BonificacionesPorComboFamilia
+    [Tags]    comboFamilia
+    Login
