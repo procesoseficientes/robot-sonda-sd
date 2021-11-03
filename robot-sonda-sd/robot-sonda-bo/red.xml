@@ -2,7 +2,7 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/Eira Delcompare/AppData/Local/Programs/Python/Python39/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/Compu Fire/AppData/Local/Programs/Python/Python310/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="true"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

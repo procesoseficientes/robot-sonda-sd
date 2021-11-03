@@ -189,6 +189,48 @@ Catalogos/Usuarios
 Catalogos-Etiquetas
     [Tags]    etiquetas
     Login
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    3
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_4"]
+    sleep    1
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    #Agregar Etiqueta
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI0_T"]
+    sleep    1
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_EditorColores_B-1"]
+    sleep    3
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_EditorColores_DDD_CNC_CT_C17"]
+    sleep    2
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_SpinPriority_B-2"]
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_MemoComments_I"]      prueba de comentario
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_TxtValueText_I"]      prueba robot framework
+    sleep    4
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
+    #Buscar etiqueta
+    sleep    3
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]    prueba
+    sleep    10
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow1"]/td[2] 
+    #Editar etiqueta
+    sleep    3
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_MemoComments_I"]      cambio de comentario
+    sleep    1
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_UiListaTipo_B-1"]
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_UiListaTipo_DDD_L_LBI1T0"]
+    sleep    2
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
+    #Eliminar etiqueta
+    sleep    3
+    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]    prueba
+    sleep    2
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow1"]/td[2] 
+    sleep    1
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI1_T"]
+    sleep    2
+    click Element    xpath=//*[@id="ASPxPopupControl2_ASPxButton2"]
+    
     
 
  Catalogos-ListaPrecios
@@ -331,6 +373,7 @@ Catalogos-portafolioProductos
 Catalogos-Resoluciones
     [Tags]    resoluciones
     Login 
+    
 
 Catalogos-Encuestas
     [Tags]    encuestas

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="Telnet" type="LIBRARY" format="ROBOT" scope="SUITE" generated="2021-09-13T16:58:09Z" specversion="3" source="C:\Users\Eira Delcompare\AppData\Local\Programs\Python\Python39\lib\site-packages\robot\libraries\Telnet.py" lineno="36">
-<version>4.1.1</version>
+<keywordspec name="Telnet" type="LIBRARY" format="ROBOT" scope="SUITE" generated="2021-11-02T14:12:08Z" specversion="3" source="C:\Users\Compu Fire\AppData\Local\Programs\Python\Python310\lib\site-packages\robot\libraries\Telnet.py" lineno="36">
+<version>4.1.2</version>
 <doc>A test library providing communication over Telnet connections.
 
 ``Telnet`` is Robot Framework's standard library that makes it possible to

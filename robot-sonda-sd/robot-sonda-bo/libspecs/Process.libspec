@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="Process" type="LIBRARY" format="ROBOT" scope="GLOBAL" generated="2021-09-13T16:58:09Z" specversion="3" source="C:\Users\Eira Delcompare\AppData\Local\Programs\Python\Python39\lib\site-packages\robot\libraries\Process.py" lineno="30">
-<version>4.1.1</version>
+<keywordspec name="Process" type="LIBRARY" format="ROBOT" scope="GLOBAL" generated="2021-11-02T14:12:07Z" specversion="3" source="C:\Users\Compu Fire\AppData\Local\Programs\Python\Python310\lib\site-packages\robot\libraries\Process.py" lineno="32">
+<version>4.1.2</version>
 <doc>Robot Framework test library for running processes.
 
 This library utilizes Python's
@@ -63,6 +63,7 @@ listed below and discussed further in sections afterwards.
 | env:&lt;name&gt; | Overrides the named environment variable(s) only.     |
 | stdout     | Path of a file where to write standard output.        |
 | stderr     | Path of a file where to write standard error.         |
+| stdin      | Configure process standard input. New in RF 4.1.2.    |
 | output_encoding | Encoding to use when reading command outputs.    |
 | alias      | Alias given to the process.                           |
 
@@ -162,6 +163,33 @@ Examples:
 
 Note that the created output files are not automatically removed after
 the test run. The user is responsible to remove them if needed.
+
+== Standard input stream ==
+
+The ``stdin`` argument makes it possible to pass information to the standard
+input stream of the started process. How its value is interpreted is
+explained in the table below.
+
+| = Value =        | = Explanation = |
+| String ``PIPE``  | Make stdin a pipe that can be written to. This is the default. |
+| String ``NONE``  | Inherit stdin from the parent process. This value is case-insensitive. |
+| Path to a file   | Open the specified file and use it as the stdin. |
+| Any other string | Create a temporary file with the text as its content and use it as the stdin. |
+| Any non-string value | Used as-is. Could be a file descriptor, stdout of another process, etc. |
+
+Values ``PIPE`` and ``NONE`` are internally mapped directly to
+``subprocess.PIPE`` and ``None``, respectively, when calling
+[https://docs.python.org/3/library/subprocess.html#subprocess.Popen|subprocess.Popen].
+The default behavior may change from ``PIPE`` to ``NONE`` in future
+releases. If you depend on the ``PIPE`` behavior, it is a good idea to use
+it explicitly.
+
+Examples:
+| `Run Process` | command | stdin=NONE |
+| `Run Process` | command | stdin=${CURDIR}/stdin.txt |
+| `Run Process` | command | stdin=Stdin as text. |
+
+The support to configure ``stdin`` is new in Robot Framework 4.1.2.
 
 == Output encoding ==
 
@@ -273,7 +301,7 @@ Considering ``OFF`` and ``0`` false is new in Robot Framework 3.1.
 <inits>
 </inits>
 <keywords>
-<kw name="Get Process Id" lineno="623">
+<kw name="Get Process Id" lineno="653">
 <arguments repr="handle=None">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -288,7 +316,7 @@ Notice that the pid is not the same as the handle returned by
 `Start Process` that is used internally by this library.</doc>
 <shortdoc>Returns the process ID (pid) of the process as an integer.</shortdoc>
 </kw>
-<kw name="Get Process Object" lineno="633">
+<kw name="Get Process Object" lineno="663">
 <arguments repr="handle=None">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -300,7 +328,7 @@ Notice that the pid is not the same as the handle returned by
 If ``handle`` is not given, uses the current `active process`.</doc>
 <shortdoc>Return the underlying ``subprocess.Popen`` object.</shortdoc>
 </kw>
-<kw name="Get Process Result" lineno="640">
+<kw name="Get Process Result" lineno="670">
 <arguments repr="handle=None, rc=False, stdout=False, stderr=False, stdout_path=False, stderr_path=False">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -367,7 +395,7 @@ support returning the whole result object, but individual attributes
 can be returned without problems.</doc>
 <shortdoc>Returns the specified `result object` or some of its attributes.</shortdoc>
 </kw>
-<kw name="Is Process Running" lineno="368">
+<kw name="Is Process Running" lineno="398">
 <arguments repr="handle=None">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -381,7 +409,7 @@ If ``handle`` is not given, uses the current `active process`.
 Returns ``True`` if the process is still running and ``False`` otherwise.</doc>
 <shortdoc>Checks is the process running or not.</shortdoc>
 </kw>
-<kw name="Join Command Line" lineno="736">
+<kw name="Join Command Line" lineno="766">
 <arguments repr="*args">
 <arg kind="VAR_POSITIONAL" required="false" repr="*args">
 <name>args</name>
@@ -401,7 +429,7 @@ Example:
 | Should Be Equal | ${cmd} | --option "value with spaces" |</doc>
 <shortdoc>Joins arguments into one command line string.</shortdoc>
 </kw>
-<kw name="Process Should Be Running" lineno="377">
+<kw name="Process Should Be Running" lineno="407">
 <arguments repr="handle=None, error_message=Process is not running.">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -419,7 +447,7 @@ If ``handle`` is not given, uses the current `active process`.
 Fails if the process has stopped.</doc>
 <shortdoc>Verifies that the process is running.</shortdoc>
 </kw>
-<kw name="Process Should Be Stopped" lineno="388">
+<kw name="Process Should Be Stopped" lineno="418">
 <arguments repr="handle=None, error_message=Process is running.">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -437,7 +465,7 @@ If ``handle`` is not given, uses the current `active process`.
 Fails if the process is still running.</doc>
 <shortdoc>Verifies that the process is not running.</shortdoc>
 </kw>
-<kw name="Run Process" lineno="302">
+<kw name="Run Process" lineno="332">
 <arguments repr="command, *arguments, **configuration">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="command">
 <name>command</name>
@@ -479,7 +507,7 @@ Examples:
 This keyword does not change the `active process`.</doc>
 <shortdoc>Runs a process and waits for it to complete.</shortdoc>
 </kw>
-<kw name="Send Signal To Process" lineno="569">
+<kw name="Send Signal To Process" lineno="599">
 <arguments repr="signal, handle=None, group=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="signal">
 <name>signal</name>
@@ -521,7 +549,7 @@ be set to any true value (see `Boolean arguments`). This is not
 supported by Jython, however.</doc>
 <shortdoc>Sends the given ``signal`` to the specified process.</shortdoc>
 </kw>
-<kw name="Split Command Line" lineno="721">
+<kw name="Split Command Line" lineno="751">
 <arguments repr="args, escaping=False">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="args">
 <name>args</name>
@@ -544,7 +572,7 @@ Examples:
 | Should Be True | $cmd == ['--option', 'value with spaces'] |</doc>
 <shortdoc>Splits command line string into a list of arguments.</shortdoc>
 </kw>
-<kw name="Start Process" lineno="341">
+<kw name="Start Process" lineno="371">
 <arguments repr="command, *arguments, **configuration">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="command">
 <name>command</name>
@@ -570,7 +598,7 @@ allows sending signals to and terminating also possible child
 processes. This is not supported on Jython.</doc>
 <shortdoc>Starts a new process on background.</shortdoc>
 </kw>
-<kw name="Switch Process" lineno="699">
+<kw name="Switch Process" lineno="729">
 <arguments repr="handle">
 <arg kind="POSITIONAL_OR_NAMED" required="true" repr="handle">
 <name>handle</name>
@@ -589,7 +617,7 @@ Example:
 | # now active process is process1 |</doc>
 <shortdoc>Makes the specified process the current `active process`.</shortdoc>
 </kw>
-<kw name="Terminate All Processes" lineno="554">
+<kw name="Terminate All Processes" lineno="584">
 <arguments repr="kill=False">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="kill=False">
 <name>kill</name>
@@ -606,7 +634,7 @@ configured to forcefully kill them immediately. See `Terminate Process`
 that this keyword uses internally for more details.</doc>
 <shortdoc>Terminates all still running processes started by this library.</shortdoc>
 </kw>
-<kw name="Terminate Process" lineno="479">
+<kw name="Terminate Process" lineno="509">
 <arguments repr="handle=None, kill=False">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
@@ -651,7 +679,7 @@ Limitations:
   child processes.</doc>
 <shortdoc>Stops the process gracefully or forcefully.</shortdoc>
 </kw>
-<kw name="Wait For Process" lineno="399">
+<kw name="Wait For Process" lineno="429">
 <arguments repr="handle=None, timeout=None, on_timeout=continue">
 <arg kind="POSITIONAL_OR_NAMED" required="false" repr="handle=None">
 <name>handle</name>
