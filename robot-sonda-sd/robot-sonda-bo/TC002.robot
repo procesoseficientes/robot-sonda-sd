@@ -59,60 +59,14 @@ Catalogos-bodegas
     Input Text    xpath=//*[@id="ASPxGridView1_DXFREditorcol1_I"]  BA003
     sleep    3
     Click element    xpath=//*[@id="ASPxGridView1_DXDataRow0"]/td[1]
-
-Catalogos/SKUs
-    [Tags]    sku
-    Login
-    sleep    2
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]
-    sleep    1
-    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
-    sleep    1
-    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol1_I"]     1015
-    sleep    2
-    Click Element   xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[2]
-
-Catalogos/clientes
-    [Tags]    cliente
-    Login 
-    sleep    2
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    sleep    2
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_2"]
-    sleep    1
-    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
-    sleep    1
-    #Seleccionar 
-    Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     1001
-    sleep    7
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
-                                                    
-    #Obtener dato de columna codigo para comparar con el siguiente   
-    ${codigo} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
-    #Obtener dato de input codigo para comparar con el anterior
-    ${input_codigo} =    Execute Javascript    return document.getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
     
-
-    #Obtener dato de la columna Nombre Cliente para comparar con el siguiente
-    ${nombre_cliente} =    Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[2].innerHTML
-    #Obtener dato del input Nombre cliente para comparar con el anterior 
-    
-    # Validacion del campo codigo 
-    IF    ${codigo} == ${input_codigo}
-    Pass Execution    Los datos del campo codigo SI coinciden   
-    ELSE 
-    Fail    Los datos del campo codigo NO coinciden  
-    END    
-
 Catalogos/Rutas
     [Tags]    rutas
     Login
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_3"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]
     Sleep    5
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     #agregar
@@ -136,14 +90,14 @@ Catalogos/Rutas
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxPageControl1_ASPxFormLayout1_ASPxMenu3_DXI2_T"]
     sleep    5
     #Eliminar
-
+    
 Catalogos/Clasificaciones
     [Tags]    clasificacion
     Login
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_2"]
     sleep    1
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
@@ -161,7 +115,7 @@ Catalogos/Usuarios
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_3"]
     sleep    1
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
@@ -185,7 +139,7 @@ Catalogos/Usuarios
     Click Element    xpath=//*[@id="splitUser_ASPxFormLayout2_UiMenuOpcionesUsuario_DXI3_T"]
     # Buscar usuario
     Input Text    xpath=//*[@id="splitUser_ASPxFormLayout1_UiVistaUsuario_DXFREditorcol0_I"]    1020
-
+    
 Catalogos-Etiquetas
     [Tags]    etiquetas
     Login
@@ -231,15 +185,13 @@ Catalogos-Etiquetas
     sleep    2
     click Element    xpath=//*[@id="ASPxPopupControl2_ASPxButton2"]
     
-    
-
- Catalogos-ListaPrecios
+Catalogos-ListaPrecios
     [Tags]    precios
     Login
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
-    Click Element    id=ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7   
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_5"]   
     sleep    7
     #agregar precio  
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
@@ -276,14 +228,31 @@ Catalogos-Etiquetas
     #sleep    1
     #Click Element    xpath=//*[@id="split_pgcDet_gridLookSku_DDD_gv_StatusBar_btnAceptarSku_0"]
     
-Catalogos-ListaDePrecios
-    [Tags]   ListaPrecios
-    Login
-    
 Catalogos-FormasDePago
-    [Tags]    FormasPago
+    [Tags]    formasPago
     Login
-   
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    2
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_6"]
+    sleep    1
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    #seleccionar formas de pago
+    click Element    xpath=//*[@id="split_gridPaymentMethod_DXDataRow1"]/td[1]
+    sleep    1
+    click Element    xpath=//*[@id="split_1_S_CB"]
+    sleep    10
+    #agregar cliente
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_B-1"]
+    sleep    2
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_DXSelBtn1_D"]
+    sleep    1
+    Click Element    xpath=//*[@id="split_pgcDet_gridLookCustomer_DDD_gv_StatusBar_btnAceptarCustumer_0"]
+    sleep    1
+    Click Element    xpath=//*[@id="ASPxSplitter1_1_S_CF"]
+    #eliminar cliente
+    
 
 Catalogos-SeguridadYRoles    #pendiente
     [Tags]    seguridad
@@ -291,7 +260,7 @@ Catalogos-SeguridadYRoles    #pendiente
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9I"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_7"]
     sleep    5
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    1
@@ -327,7 +296,7 @@ Catalogos-portafolioProductos
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_10I"]
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_8"]
     sleep    2
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
@@ -369,59 +338,194 @@ Catalogos-portafolioProductos
     sleep    2
     Click Element    xpath=//*[@id="split_1_S_CF"]    #se encoge el apartado productos
     
-
 Catalogos-Resoluciones
     [Tags]    resoluciones
     Login 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    #Agregar resolucion
+    input Text    xpath=//*[@id="split_frmLytDet_txtNumero_I"]    1234
+    input Text    xpath=//*[@id="split_frmLytDet_btnTextSerie_I"]    4321
+    input text    xpath=//*[@id="split_frmLytDet_txtNombre_I"]    Ejemplo Framework 1
+    input text    xpath=//*[@id="split_frmLytDet_txtDireccion_I"]    Guatemala
+    click Element    xpath=//*[@id="split_frmLytDet_dtFecha_B-1"]
+    sleep    1
+    click Element    xpath=//*[@id="split_frmLytDet_dtFecha_DDD_C_BT"]
+    sleep    1
+    click element    xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]
+    click element    xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]
+    sleep    1
+    click element    xpath=//*[@id="split_frmLytDet_gridLookpRuta_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="split_frmLytDet_gridLookpRuta_DDD_gv_DXDataRow7"]/td[1]
+    sleep    3
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]
+    sleep    5
+    #Seleccionar resolucion
+    input text    xpath=//*[@id="split_gridResolution_DXFREditorcol0_I"]    1234
+    sleep    5
+    click element    xpath=//*[@id="split_gridResolution_DXDataRow0"]/td[2]
+    sleep    2
+    #Editar resolucion
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI3_"]
+    sleep    3
+    #Eliminar resolucion
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI1_T"]
     
 
-Catalogos-Encuestas
-    [Tags]    encuestas
-    Login 
-
 Catalogos-Frecuencias
-    [Tags]    resoluciones
+    [Tags]   frecuencias
     Login
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_10"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
     
 Catalogos-SecuenciasDeDocumentos
     [Tags]    SecuenciasDoc
     Login  
-    
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_11"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
 Catalogos-UsuariosPorRuta
     [Tags]    usuariosRuta
     Login 
-    
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_12"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
 Catalogos-CentrosDeDistribucion
     [Tags]    distribucion
     Login
-    
-Catalogos-Canales
-    [Tags]    canales
-    Login  
-    
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_13"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+
 Catalogos-Moneda
     [Tags]    moneda
     Login 
-            
-Catalogos-Configuracion de Combos
-    [Tags]    ConfCombos
-    Login
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    sleep    3
-    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_19"]
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_14"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
     
 Catalogos-Equipos de ventas
     [Tags]    equiposVentas
     Login 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_15"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
 
 Catalogos-MetasDeEquipo
     [Tags]    metas
     Login 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_16"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
     
 Catalogos-AdministrarLicencias
     [Tags]    licencias
     Login 
+    sleep    2
+    Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    sleep    5
+    click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_17"]
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+
+#////////////////////////////////ventanas o vistas pendientes que no se encuentran en el backoffice//////////////////
+
+# Catalogos/SKUs
+    # [Tags]    sku
+    # Login
+    # sleep    2
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    # sleep    3
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]
+    # sleep    1
+    # Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    # sleep    1
+    # Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol1_I"]     1015
+    # sleep    2
+    # Click Element   xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[2]
+
+# Catalogos/clientes
+    # [Tags]    cliente
+    # Login 
+    # sleep    2
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    # sleep    2
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_2"]
+    # sleep    1
+    # Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    # sleep    1
+    # #Seleccionar 
+    # Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     1001
+    # sleep    7
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
+                                                    
+    # #Obtener dato de columna codigo para comparar con el siguiente   
+    # ${codigo} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
+    # #Obtener dato de input codigo para comparar con el anterior
+    # ${input_codigo} =    Execute Javascript    return document.getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
+    
+
+    # #Obtener dato de la columna Nombre Cliente para comparar con el siguiente
+    # ${nombre_cliente} =    Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[2].innerHTML
+    # #Obtener dato del input Nombre cliente para comparar con el anterior 
+    
+    # # Validacion del campo codigo 
+    # IF    ${codigo} == ${input_codigo}
+    # Pass Execution    Los datos del campo codigo SI coinciden   
+    # ELSE 
+    # Fail    Los datos del campo codigo NO coinciden  
+    # END   
+    
+
+# Catalogos-Encuestas
+    # [Tags]    encuestas
+    # Login 
+    # sleep    2
+    # click Element    xpath=
+
+
+    
+# Catalogos-Canales
+    # [Tags]    canales
+    # Login  
+    
+
+            
+# Catalogos-Configuracion de Combos
+    # [Tags]    ConfCombos
+    # Login
+    # sleep    2
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
+    # sleep    3
+    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_19"]
+    
 
  #######################################################################################   
  #                     ******************SONDA******************
@@ -447,6 +551,7 @@ Sonda-Vendedores-En-Ruta
 Sonda-SeguimientoDeRuta
     [Tags]    seguimientoRuta
     Login    
+    
 Sonda-TransferenciaDeProductos
     [Tags]    transferenciaProducto
     Login
