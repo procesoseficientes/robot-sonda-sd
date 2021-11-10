@@ -386,16 +386,84 @@ Catalogos-Frecuencias
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_10"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
+    #agregar
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_menOpciones_DXI0_T"]
+    sleep    3
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaTareaTipo_I"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaTareaTipo_DDD_L_LBI2T0"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaFrecuencia_I"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaFrecuencia_DDD_L_LBI1T0"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaRuta_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaRuta_DDD_gv_DXDataRow2"]
+    sleep    3
+    input text    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiSemaReferencia_I"]    16/11/2021
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaCheckDias_RB5_I_D"]
+    sleep    5
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_menOpciones_DXI2_T"]
+    #buscar
+    input text    xpath=//*[@id="UiSplit_UiVistaFrecuencia_DXFREditorcol4_I"]    Venta
+    sleep    5
+    click element    xpath=//*[@id="UiSplit_UiVistaFrecuencia_DXDataRow0"]/td[2]
+    sleep    3
+    #editar
+    input text    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiSemaReferencia_I"]    21/11/2021
+    sleep    2
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_UiListaCheckDias_RB1_I_D"]
+    sleep    5
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_menOpciones_DXI2_T"]
+    sleep    5
+    #eliminar
+    click element    xpath=//*[@id="UiSplit_UiTabs_UiFormLayout_menOpciones_DXI1_T"]
+    click element    xpath=//*[@id="UiPopupConfirmarEliminarFrecuencia_btnBorrarFrecuenciaOk"]
     
+
 Catalogos-SecuenciasDeDocumentos
-    [Tags]    SecuenciasDoc
+    [Tags]    secuenciasDoc
     Login  
     sleep    2
     Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
     sleep    5
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_11"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    #agregar
+    # sleep    2
+    # click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI0_T"]
+    # sleep    3
+    # click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_B-1"]       
+    # sleep    3
+    # click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_DDD_L_LBI1T0"]
+    # input text    xpath=//*[@id="split_frmLytDet_UiTextoSerie_I"]    11111
+    # input text    xpath=//*[@id="split_frmLytDet_UiTextoNombre_I"]    prueba con Robot
+    # input text    xpath=//*[@id="split_frmLytDet_UiTextoDireccion_I"]    Guatemala    
+    # sleep    2
+    # click element    xpath=//*[@id="split_frmLytDet_UiFecha_B-1"]
+    # sleep    1
+    # click element    xpath=//*[@id="split_frmLytDet_UiFecha_DDD_C_BT"]
+    # click element    xpath=//*[@id="split_frmLytDet_UiSpinRangoFinal_B-2"]
+    # sleep    2
+    # click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_B-1"]
+    # sleep    1
+    # click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_DDD_gv_DXDataRow6"]
+    # sleep    3
+    # click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]
+    #buscar
+    sleep    5
+    input text    xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXFREditorcol0_I"]    11111
+    sleep    5
+    click element    xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXDataRow0"]/td[2]
+    #editar
+    #eliminar
+    sleep    5
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI1_T"]
     sleep    2
+    click element    xpath=//*[@id="UIPopConfirmarBorrarSecuenciaDocumento_btnDeletePoftFolioOK_CD"]
+    
 Catalogos-UsuariosPorRuta
     [Tags]    usuariosRuta
     Login 

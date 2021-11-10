@@ -1,264 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211105 06:20:00.440" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211110 12:42:21.943" rpa="false" schemaversion="2">
 <suite id="s1" name="TC002" source="C:\Users\Compu Fire\Desktop\SCRIPTS ROBOT\robot-sonda-sd\robot-sonda-sd\robot-sonda-bo\TC002.robot">
-<test id="s1-t1" name="Catalogos-Resoluciones">
+<test id="s1-t1" name="Catalogos-SecuenciasDeDocumentos">
 <kw name="Login">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://52.149.161.64:8091</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211105 06:20:00.769" level="INFO">Opening browser 'chrome' to base url 'http://52.149.161.64:8091'.</msg>
-<status status="PASS" starttime="20211105 06:20:00.768" endtime="20211105 06:20:03.340"/>
+<msg timestamp="20211110 12:42:22.317" level="INFO">Opening browser 'chrome' to base url 'http://52.149.161.64:8091'.</msg>
+<status status="PASS" starttime="20211110 12:42:22.317" endtime="20211110 12:42:25.197"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211105 06:20:03.340" endtime="20211105 06:20:03.465"/>
+<status status="PASS" starttime="20211110 12:42:25.198" endtime="20211110 12:42:25.561"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtUsuario</arg>
 <arg>admin@cendalza</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:03.465" level="INFO">Typing text 'admin@cendalza' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
-<status status="PASS" starttime="20211105 06:20:03.465" endtime="20211105 06:20:03.604"/>
+<msg timestamp="20211110 12:42:25.562" level="INFO">Typing text 'admin@cendalza' into text field 'name=UiCalllbackPanel$txtUsuario'.</msg>
+<status status="PASS" starttime="20211110 12:42:25.562" endtime="20211110 12:42:25.681"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>1237710</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:03.604" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
-<status status="PASS" starttime="20211105 06:20:03.604" endtime="20211105 06:20:03.719"/>
+<msg timestamp="20211110 12:42:25.682" level="INFO">Typing text '1237710' into text field 'name=UiCalllbackPanel$txtPass'.</msg>
+<status status="PASS" starttime="20211110 12:42:25.682" endtime="20211110 12:42:25.787"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>name=UiCalllbackPanel$txtPass</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20211105 06:20:03.720" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
-<msg timestamp="20211105 06:20:04.057" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20211105 06:20:04.057" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20211105 06:20:03.720" endtime="20211105 06:20:04.073"/>
+<msg timestamp="20211110 12:42:25.788" level="INFO">Sending key(s) ('ENTER',) to name=UiCalllbackPanel$txtPass element.</msg>
+<msg timestamp="20211110 12:42:26.062" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20211110 12:42:26.062" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20211110 12:42:25.788" endtime="20211110 12:42:26.081"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:06.077" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:04.073" endtime="20211105 06:20:06.077"/>
+<msg timestamp="20211110 12:42:28.081" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:26.081" endtime="20211110 12:42:28.081"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:06.078" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
-<status status="PASS" starttime="20211105 06:20:06.077" endtime="20211105 06:20:06.127"/>
+<msg timestamp="20211110 12:42:28.082" level="INFO">Clicking element 'xpath=/html/body/form/div[5]/div/div[2]/div/table/tbody/tr[2]/td[1]/div'.</msg>
+<status status="PASS" starttime="20211110 12:42:28.081" endtime="20211110 12:42:28.159"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:11.133" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:06.128" endtime="20211105 06:20:11.133"/>
+<msg timestamp="20211110 12:42:33.169" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:28.159" endtime="20211110 12:42:33.169"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:11.134" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
-<status status="PASS" starttime="20211105 06:20:11.133" endtime="20211105 06:20:11.196"/>
+<msg timestamp="20211110 12:42:33.170" level="INFO">Clicking element 'xpath=/html/body/form/div[3]/table/tbody/tr/td[1]/div/table/tbody/tr[2]/td/div/div/div/ul/li/span'.</msg>
+<status status="PASS" starttime="20211110 12:42:33.169" endtime="20211110 12:42:33.249"/>
 </kw>
-<status status="PASS" starttime="20211105 06:20:00.768" endtime="20211105 06:20:11.197"/>
+<status status="PASS" starttime="20211110 12:42:22.316" endtime="20211110 12:42:33.249"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:13.206" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:11.200" endtime="20211105 06:20:13.206"/>
+<msg timestamp="20211110 12:42:35.265" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:33.250" endtime="20211110 12:42:35.265"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:13.210" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
-<status status="PASS" starttime="20211105 06:20:13.209" endtime="20211105 06:20:13.265"/>
+<msg timestamp="20211110 12:42:35.268" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img'.</msg>
+<status status="PASS" starttime="20211110 12:42:35.268" endtime="20211110 12:42:35.322"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:18.273" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:13.265" endtime="20211105 06:20:18.273"/>
+<msg timestamp="20211110 12:42:40.332" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:35.323" endtime="20211110 12:42:40.332"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9"]</arg>
+<arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_11"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:18.276" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_9"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:18.276" endtime="20211105 06:20:18.333"/>
+<msg timestamp="20211110 12:42:40.334" level="INFO">Clicking element 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_11"]'.</msg>
+<status status="PASS" starttime="20211110 12:42:40.334" endtime="20211110 12:42:40.400"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20211105 06:20:18.334" level="INFO">Selecting frame 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:18.333" endtime="20211105 06:20:21.088"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:23.093" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:21.089" endtime="20211105 06:20:23.093"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_txtNumero_I"]</arg>
-<arg>1234</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:23.095" level="INFO">Typing text '1234' into text field 'xpath=//*[@id="split_frmLytDet_txtNumero_I"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:23.095" endtime="20211105 06:20:23.215"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_btnTextSerie_I"]</arg>
-<arg>4321</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:23.216" level="INFO">Typing text '4321' into text field 'xpath=//*[@id="split_frmLytDet_btnTextSerie_I"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:23.216" endtime="20211105 06:20:23.335"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_txtNombre_I"]</arg>
-<arg>Ejemplo Framework 1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:23.336" level="INFO">Typing text 'Ejemplo Framework 1' into text field 'xpath=//*[@id="split_frmLytDet_txtNombre_I"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:23.336" endtime="20211105 06:20:23.500"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_txtDireccion_I"]</arg>
-<arg>Guatemala</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:23.502" level="INFO">Typing text 'Guatemala' into text field 'xpath=//*[@id="split_frmLytDet_txtDireccion_I"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:23.501" endtime="20211105 06:20:23.630"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_dtFecha_B-1"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:23.631" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_dtFecha_B-1"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:23.630" endtime="20211105 06:20:23.833"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:24.843" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211105 06:20:23.833" endtime="20211105 06:20:24.843"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_dtFecha_DDD_C_BT"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:24.847" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_dtFecha_DDD_C_BT"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:24.846" endtime="20211105 06:20:24.937"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:25.946" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211105 06:20:24.939" endtime="20211105 06:20:25.946"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:25.948" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:25.948" endtime="20211105 06:20:26.057"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:26.060" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_spinRangoFinal_B-2"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:26.059" endtime="20211105 06:20:26.123"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:27.132" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211105 06:20:26.123" endtime="20211105 06:20:27.132"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_gridLookpRuta_B-1"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:27.134" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_gridLookpRuta_B-1"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:27.134" endtime="20211105 06:20:27.235"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:28.248" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211105 06:20:27.235" endtime="20211105 06:20:28.248"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_gridLookpRuta_DDD_gv_DXDataRow7"]/td[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:28.249" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_gridLookpRuta_DDD_gv_DXDataRow7"]/td[1]'.</msg>
-<status status="PASS" starttime="20211105 06:20:28.248" endtime="20211105 06:20:28.345"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:31.359" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:28.349" endtime="20211105 06:20:31.359"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:31.361" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:31.361" endtime="20211105 06:20:31.444"/>
+<msg timestamp="20211110 12:42:40.401" level="INFO">Selecting frame 'xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]'.</msg>
+<status status="PASS" starttime="20211110 12:42:40.401" endtime="20211110 12:42:42.137"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:36.454" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:31.444" endtime="20211105 06:20:36.454"/>
+<msg timestamp="20211110 12:42:47.142" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:42.139" endtime="20211110 12:42:47.142"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_gridResolution_DXFREditorcol0_I"]</arg>
-<arg>1234</arg>
+<arg>xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXFREditorcol0_I"]</arg>
+<arg>11111</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:36.458" level="INFO">Typing text '1234' into text field 'xpath=//*[@id="split_gridResolution_DXFREditorcol0_I"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:36.457" endtime="20211105 06:20:36.578"/>
+<msg timestamp="20211110 12:42:47.144" level="INFO">Typing text '11111' into text field 'xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXFREditorcol0_I"]'.</msg>
+<status status="PASS" starttime="20211110 12:42:47.144" endtime="20211110 12:42:47.271"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:41.579" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:36.579" endtime="20211105 06:20:41.579"/>
+<msg timestamp="20211110 12:42:52.274" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:47.271" endtime="20211110 12:42:52.274"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_gridResolution_DXDataRow0"]/td[2]</arg>
+<arg>xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXDataRow0"]/td[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:41.581" level="INFO">Clicking element 'xpath=//*[@id="split_gridResolution_DXDataRow0"]/td[2]'.</msg>
-<status status="PASS" starttime="20211105 06:20:41.581" endtime="20211105 06:20:41.697"/>
+<msg timestamp="20211110 12:42:52.276" level="INFO">Clicking element 'xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXDataRow0"]/td[2]'.</msg>
+<status status="PASS" starttime="20211110 12:42:52.276" endtime="20211110 12:42:52.384"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:43.705" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:41.698" endtime="20211105 06:20:43.705"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="split_frmLytDet_menOpciones_DXI3_"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:43.708" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_menOpciones_DXI3_"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:43.707" endtime="20211105 06:20:43.791"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211105 06:20:46.795" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20211105 06:20:43.791" endtime="20211105 06:20:46.795"/>
+<msg timestamp="20211110 12:42:57.387" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:52.385" endtime="20211110 12:42:57.387"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="split_frmLytDet_menOpciones_DXI1_T"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211105 06:20:46.796" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_menOpciones_DXI1_T"]'.</msg>
-<status status="PASS" starttime="20211105 06:20:46.795" endtime="20211105 06:20:46.949"/>
+<msg timestamp="20211110 12:42:57.389" level="INFO">Clicking element 'xpath=//*[@id="split_frmLytDet_menOpciones_DXI1_T"]'.</msg>
+<status status="PASS" starttime="20211110 12:42:57.389" endtime="20211110 12:42:57.503"/>
 </kw>
-<tag>resoluciones</tag>
-<status status="PASS" starttime="20211105 06:20:00.767" endtime="20211105 06:20:46.950"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211110 12:42:59.519" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211110 12:42:57.504" endtime="20211110 12:42:59.519"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="UIPopConfirmarBorrarSecuenciaDocumento_btnDeletePoftFolioOK_CD"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211110 12:42:59.524" level="INFO">Clicking element 'xpath=//*[@id="UIPopConfirmarBorrarSecuenciaDocumento_btnDeletePoftFolioOK_CD"]'.</msg>
+<status status="PASS" starttime="20211110 12:42:59.524" endtime="20211110 12:42:59.621"/>
+</kw>
+<tag>secuenciasDoc</tag>
+<status status="PASS" starttime="20211110 12:42:22.316" endtime="20211110 12:42:59.622"/>
 </test>
-<status status="PASS" starttime="20211105 06:20:00.443" endtime="20211105 06:20:46.952"/>
+<status status="PASS" starttime="20211110 12:42:21.945" endtime="20211110 12:42:59.624"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">resoluciones</stat>
+<stat pass="1" fail="0" skip="0">secuenciasDoc</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="TC002">TC002</stat>
