@@ -432,26 +432,26 @@ Catalogos-SecuenciasDeDocumentos
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_11"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     #agregar
-    # sleep    2
-    # click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI0_T"]
-    # sleep    3
-    # click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_B-1"]       
-    # sleep    3
-    # click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_DDD_L_LBI1T0"]
-    # input text    xpath=//*[@id="split_frmLytDet_UiTextoSerie_I"]    11111
-    # input text    xpath=//*[@id="split_frmLytDet_UiTextoNombre_I"]    prueba con Robot
-    # input text    xpath=//*[@id="split_frmLytDet_UiTextoDireccion_I"]    Guatemala    
-    # sleep    2
-    # click element    xpath=//*[@id="split_frmLytDet_UiFecha_B-1"]
-    # sleep    1
-    # click element    xpath=//*[@id="split_frmLytDet_UiFecha_DDD_C_BT"]
-    # click element    xpath=//*[@id="split_frmLytDet_UiSpinRangoFinal_B-2"]
-    # sleep    2
-    # click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_B-1"]
-    # sleep    1
-    # click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_DDD_gv_DXDataRow6"]
-    # sleep    3
-    # click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]
+    sleep    2
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI0_T"]
+    sleep    3
+    click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_B-1"]       
+    sleep    3
+    click element    xpath=//*[@id="split_frmLytDet_UIListaTipoDocumento_DDD_L_LBI1T0"]
+    input text    xpath=//*[@id="split_frmLytDet_UiTextoSerie_I"]    11111
+    input text    xpath=//*[@id="split_frmLytDet_UiTextoNombre_I"]    prueba con Robot
+    input text    xpath=//*[@id="split_frmLytDet_UiTextoDireccion_I"]    Guatemala    
+    sleep    2
+    click element    xpath=//*[@id="split_frmLytDet_UiFecha_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="split_frmLytDet_UiFecha_DDD_C_BT"]
+    click element    xpath=//*[@id="split_frmLytDet_UiSpinRangoFinal_B-2"]
+    sleep    2
+    click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="split_frmLytDet_UiListaRuta_DDD_gv_DXDataRow6"]
+    sleep    3
+    click element    xpath=//*[@id="split_frmLytDet_menOpciones_DXI2_T"]
     #buscar
     sleep    5
     input text    xpath=//*[@id="split_UiVistaSecuenciaDocumentos_DXFREditorcol0_I"]    11111
@@ -473,6 +473,22 @@ Catalogos-UsuariosPorRuta
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_12"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
+    #seleccionar
+    click element    xpath=//*[@id="UiSplit_UiVistaUsuario_DXDataRow4"]
+    sleep    2
+    #agregar ruta
+    click element    xpath=//*[@id="UiSplit_UiFormLayout_UiListaRutas_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiFormLayout_UiListaRutas_DDD_gv_DXSelBtn4_D"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplit_UiFormLayout_UiListaRutas_DDD_gv_StatusBar_btnAceptarCustumer_0_CD"]
+    sleep    3
+    #buscar ruta
+    input text     xpath=//*[@id="UiSplit_UiVistaRuta_DXFREditorcol1_I"]    RUTA-12
+    sleep    5
+    #eliminar ruta
+    click element    xpath=//*[@id="UiSplit_UiVistaRuta_DXCBtn0"]
+    
 Catalogos-CentrosDeDistribucion
     [Tags]    distribucion
     Login
