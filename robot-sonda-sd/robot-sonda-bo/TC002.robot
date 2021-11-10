@@ -498,7 +498,38 @@ Catalogos-CentrosDeDistribucion
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_13"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
-
+    #agregar
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiMenuOpcionesCentroDeDistribucion_DXI0_T"]
+    sleep    2
+    input text    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiTxtNombreCentroDeDistribucion_I"]    prueba con robot
+    input text    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiTxtDescripcionCentroDeDistribucion_I"]    prueba realizada con un script de robot y selenium
+    input text    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiTxtDireccionCentroDeDistribucion_I"]    Villa Nueva, Guatemala
+    sleep    1
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiSpinLatitudCentroDeDistribucion_B-2Img"]
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiSpinLongitudCentroDeDistribucion_B-2"]
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiSpinLongitudCentroDeDistribucion_B-2"]
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiSpinLongitudCentroDeDistribucion_B-2"]
+    sleep    3
+    Click Element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiMenuOpcionesCentroDeDistribucion_DXI2_T"]
+    sleep    5
+    # buscar
+    input text    xpath=//*[@id="splitDistributionCenter_UiVistaCentrosDeDistribucion_DXFREditorcol1_I"]    prueba con robot
+    sleep    2
+    click element    xpath=//*[@id="splitDistributionCenter_UiVistaCentrosDeDistribucion_DXDataRow0"]
+    sleep    2
+    # editar
+    input text    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiTxtNombreCentroDeDistribucion_I"]    modificacion ejemplo creado con robot framework 
+    input text    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiTxtDescripcionCentroDeDistribucion_I"]    modificacion comentario de prueba realizada con un script de robot y selenium
+    sleep    3
+    Click Element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiMenuOpcionesCentroDeDistribucion_DXI2_T"]
+    sleep    5
+    # eliminar    input text    xpath=//*[@id="splitDistributionCenter_UiVistaCentrosDeDistribucion_DXFREditorcol1_I"]    modificacion ejemplo
+    sleep    3
+    click element    xpath=//*[@id="splitDistributionCenter_UiVistaCentrosDeDistribucion_DXDataRow0"]
+    sleep    2
+    click element    xpath=//*[@id="splitDistributionCenter_UiCentroDeDistribucionPageControl_UiMenuOpcionesCentroDeDistribucion_DXI1_T"]
+    
+    
 Catalogos-Moneda
     [Tags]    moneda
     Login 
