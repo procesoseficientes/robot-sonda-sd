@@ -539,7 +539,31 @@ Catalogos-Moneda
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_14"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
+    #agregar
+    click element    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI0_T"]
+    input text    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiTextoCodigoMoneda_I"]    $
+    input text    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiTextoNombreMoneda_I"]    Dolar
+    input text    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiTextoSimboloMoneda_I"]   $
+    sleep    3
+    click element    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI1_T"]
+    #buscar
+    sleep    5
+    input text    xpath=//*[@id="UiSplitGeneral_UiVistaMoneda_DXFREditorcol0_I"]    $
+    sleep    5
+    #editar
+    click element    xpath=//*[@id="UiSplitGeneral_UiVistaMoneda_DXDataRow0"]/td[3]
+    input text    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiTextoCodigoMoneda_I"]    $$
+    input text    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiTextoNombreMoneda_I"]    Dolar Estadounidense
+    sleep    3
+    click element    xpath=//*[@id="UiSplitGeneral_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI1_T"]
+    #eliminar
+    input text    xpath=//*[@id="UiSplitGeneral_UiVistaMoneda_DXFREditorcol0_I"]    $
+    sleep    5
+    click element    xpath=//*[@id="UiSplitGeneral_UiVistaMoneda_DXDataRow0"]/td[3]
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_DDD_gv_StatusBar_UiBotonAgregarUsuarios_0_CD"]
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_DDD_gv_StatusBar_UiBotonCerrarPopupUsuarios_0"]
     
+
 Catalogos-Equipos de ventas
     [Tags]    equiposVentas
     Login 
@@ -549,7 +573,34 @@ Catalogos-Equipos de ventas
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_15"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
-
+   
+    #nuevo
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI0_T"]
+    input text    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiTextoNombre_I"]    pruebaSelenium
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaUsuariosParaSupervisor_B-1"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaUsuariosParaSupervisor_DDD_gv_DXDataRow1"]/td[1]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_B-1"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_DDD_gv_DXDataRow2"]/td[1]
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_DDD_gv_DXDataRow3"]/td[1]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiListaDeUsuariosDisponibles_DDD_gv_StatusBar_UiBotonCerrarPopupUsuarios_0_CD"]
+    sleep    3
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI1_T"]
+    #busqueda
+    sleep    5
+    input text    xpath=//*[@id="UiSplitterPrincipal_UiVistaEquipo_DXFREditorcol1_I"]    pruebaSelenium
+    sleep    5
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiVistaEquipo_DXDataRow0"]/td[2]
+    #editar
+    input text    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiTextoNombre_I"]    pruebaSelenium modificacion
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiVistaUsuariosAsociados_DXCBtn1"]
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI1_T"]
+    #eliminar
+    sleep    5
+    click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI2_T"]
 Catalogos-MetasDeEquipo
     [Tags]    metas
     Login 
