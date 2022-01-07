@@ -253,6 +253,7 @@ Catalogos-FormasDePago
     Click Element    xpath=//*[@id="ASPxSplitter1_1_S_CF"]
     #eliminar cliente
     
+    
 
 Catalogos-SeguridadYRoles    #pendiente
     [Tags]    seguridad
@@ -573,7 +574,6 @@ Catalogos-Equipos de ventas
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_15"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
-   
     #nuevo
     click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI0_T"]
     input text    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiTextoNombre_I"]    pruebaSelenium
@@ -601,6 +601,7 @@ Catalogos-Equipos de ventas
     #eliminar
     sleep    5
     click element    xpath=//*[@id="UiSplitterPrincipal_UiFormLayoutDatosGenerales_UiMenuDatosGenerales_DXI2_T"]
+    
 Catalogos-MetasDeEquipo
     [Tags]    metas
     Login 
@@ -610,6 +611,26 @@ Catalogos-MetasDeEquipo
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_16"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
+    #agregar
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiMenuOpcionesDetalleMetas_DXI0_T"]
+    sleep    3
+    input text    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiTextoNombre_I"]    prueba selenium
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiListaEquipos_B-1"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiListaEquipos_DDD_gv_DXDataRow1"]    
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiFechaInicio_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiFechaInicio_DDD_C_mt"]/tbody/tr[4]/td[3]
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiFechaFin_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiFechaFin_DDD_C_mt"]/tbody/tr[4]/td[5]
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiMonto_B-2"]
+    click element    xpath=//*[@id="UiSplitterGeneral_UiSplitterDatosGenerales_ASPxPageControl1_UiControlesGenerales_UiMonto_B-2"]    
+
+   #no es posible continuar, debido a que en el apartado vendedores de equipo no se puede visualizar a los vendedores
+    #editar
+    #eliminar
     
 Catalogos-AdministrarLicencias
     [Tags]    licencias
@@ -620,81 +641,10 @@ Catalogos-AdministrarLicencias
     click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_17"]
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
-
-#////////////////////////////////ventanas o vistas pendientes que no se encuentran en el backoffice//////////////////
-
-# Catalogos/SKUs
-    # [Tags]    sku
-    # Login
-    # sleep    2
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    # sleep    3
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_1"]
-    # sleep    1
-    # Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
-    # sleep    1
-    # Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol1_I"]     1015
-    # sleep    2
-    # Click Element   xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]/td[2]
-
-# Catalogos/clientes
-    # [Tags]    cliente
-    # Login 
-    # sleep    2
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    # sleep    2
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_2"]
-    # sleep    1
-    # Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
-    # sleep    1
-    # #Seleccionar 
-    # Input Text    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXFREditorcol0_I"]     1001
-    # sleep    7
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxGridView1_DXDataRow0"]
-                                                    
-    # #Obtener dato de columna codigo para comparar con el siguiente   
-    # ${codigo} =  Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[1].innerHTML
-    # #Obtener dato de input codigo para comparar con el anterior
-    # ${input_codigo} =    Execute Javascript    return document.getElementsByClassName("dxeEditArea_MetropolisBlue dxeEditAreaSys")[0].value
-    
-
-    # #Obtener dato de la columna Nombre Cliente para comparar con el siguiente
-    # ${nombre_cliente} =    Execute Javascript    return document.getElementById("ASPxSplitter1_ASPxGridView1_DXDataRow0").getElementsByClassName("dxgv")[2].innerHTML
-    # #Obtener dato del input Nombre cliente para comparar con el anterior 
-    
-    # # Validacion del campo codigo 
-    # IF    ${codigo} == ${input_codigo}
-    # Pass Execution    Los datos del campo codigo SI coinciden   
-    # ELSE 
-    # Fail    Los datos del campo codigo NO coinciden  
-    # END   
-    
-
-# Catalogos-Encuestas
-    # [Tags]    encuestas
-    # Login 
-    # sleep    2
-    # click Element    xpath=
-
-
-    
-# Catalogos-Canales
-    # [Tags]    canales
-    # Login  
-    
-
-            
-# Catalogos-Configuracion de Combos
-    # [Tags]    ConfCombos
-    # Login
-    # sleep    2
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[1]/span/img
-    # sleep    3
-    # Click Element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_0_19"]
-    
+    #completo, no se pueden realizar mas acciones 
 
  #######################################################################################   
- #                     ******************SONDA******************
+ #                     ******************MAYOREO******************
  #######################################################################################
 
 Sonda-Vendedores-En-Ruta
@@ -707,76 +657,187 @@ Sonda-Vendedores-En-Ruta
     sleep    2
     Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
     sleep    2
+    #agregar
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiListaDeUsuarios_B-1"]
     sleep    2
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiListaDeUsuarios_DDD_gv_DXDataRow0"]/td[1]
     sleep    5
     Click Element    xpath=//*[@id="UiMapaCbPanel_UiMapaSeparador_UiMapaMenu_DXI0_"]
     
-
-Sonda-SeguimientoDeRuta
-    [Tags]    seguimientoRuta
-    Login    
-    
-Sonda-TransferenciaDeProductos
-    [Tags]    transferenciaProducto
-    Login
-    
-Sonda-CumplimientoDeRuta
-    [Tags]    cumplimiento
-    Login
-    
-Sonda-LiquidacionRuta
-    [Tags]    liquidacion
-    Login
-    
-Sonda-Microencuestas
-    [Tags]    microencuestas
-    Login
-
 #######################################################################################    
-#                     ******************CONSULTAS******************
+#                     ******************CONSULTAS/REPORTES******************
 #######################################################################################
 
-Consultas-EnvioAErp
-    [Tags]    envioERP
+Consultas-VendedoresEnRuta
+    [Tags]    vendedoresRuta
     Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_0"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    #agregar
+    # final, de momento no es posible realizar mas
     
-Consultas-Poligonos
-    [Tags]    poligonos
+Consultas-seguimientoDeRuta
+    [Tags]    segRuta
     Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_1"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+      #agregar
+    # final, de momento no es posible realizar mas
     
-Consultas-Facturacion
-    [Tags]    facturacion
+Consultas-transferenciaDeProductos
+    [Tags]    transProd
     Login
-    
-Consultas-PerformanceDeRuta
-    [Tags]    performance
-    Login
-    
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_2"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    #agregar
+    sleep    2
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_menOpciones_DXI0_T"]
+    sleep    1
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_UiListaVendedor_B-1"]
+    sleep    2
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_UiListaVendedor_DDD_gv_DXDataRow0"]
+    sleep    2
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_UiListaBodega_B-1"]
+    sleep    2
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_UiListaBodega_DDD_gv_DXDataRow2"]
+    sleep    1
+    input text    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_UiComentairo_I"]    prueba con selenium     
+    sleep    3
+    click element    xpath=//*[@id="SpliterContent_ctl10_ASPxFormLayout1_menOpciones_DXI1_T"]           
+    # final, de momento no es posible realizar mas
+        
+
 Consultas-Scouting
     [Tags]    scouting
     Login
-    
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_3"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_mt"]/tbody/tr[2]/td[4]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_UiFechaInicio_DDD_C_BO"]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControlForScouting_ASPxSplitter1_rblCliente_RB2_I_D"]
+    #agregar
+    #final, de momento no es posible realizar mas
+
 Consultas-OrdenesDeVenta
     [Tags]    ordenesVenta
     Login
-    
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_4"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_DDD_C_PMC"]
+    sleep    1
+    click element    xpath=//*[@id="ASPxPageControl1_ASPxSplitter1_UiFechaInicio_DDD_C_mt"]/tbody/tr[3]/td[3]
+    #final, de momento no es posible realizar mas
+
 Consultas-TomaDeInventario
-    [Tags]    tomaInventario
+    [Tags]    tomaInv
     Login
-    
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_5"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2    
+    #final, de momento no es posible realizar mas
+
 Consultas-TareasSinGestion
-    [Tags]    tareaSinGestion
+    [Tags]    tSinGestion
     Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_6"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2    
     
+Consultas-CumplimientoDeruta
+    [Tags]    cumplimiento
+    Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_7"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2   
+    
+
 Consultas-EficienciaSemanalDeRuta
     [Tags]    eficiencia
     Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_8"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2   
+    #busqueda
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiListaRuta_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiListaRuta_DDD_gv_DXDataRow0"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiListaRuta_DDD_gv_StatusBar_UiBotonAceptarRutas_0"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiListaRadioButton_RB0_I_D"]
     
 Consultas-VentasPorSKU
     [Tags]    ventasSKU 
     Login
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_CD"]/ul/li/ul/li[3]/span
+    sleep    2
+    click element    xpath=//*[@id="ASPxSplitter1_ASPxSplitter2_ASPxTreeView1_N0_2_9"]
+    sleep    2
+    Select frame    xpath=//*[@id="ASPxSplitter1_ASPxSplitter3_1_CC"]
+    sleep    2
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiFechaIncio_B-1"]
+    sleep    1
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiFechaIncio_DDD_C_PMC"]
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiFechaIncio_DDD_C_PMC"]
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiFechaIncio_DDD_C_PMC"]
+    click element    xpath=//*[@id="UiSplitterVistaGeneral_UiFechaIncio_DDD_C_PMC"]
     
 Consultas-CambiosEnClientes
     [Tags]    cambiosClientes
